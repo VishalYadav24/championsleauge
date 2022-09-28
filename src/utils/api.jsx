@@ -13,6 +13,13 @@ export const getListOfChampions = async() => {
             "token":API_KEY
         }
     }
-   const response = await axios.get(`${baseUrl}`,config);
-   return response?.data;
+    try{
+
+        const response = await axios.get(`${baseUrl}`,config);
+        return response?.data;
+    }
+    catch(error){
+        throw(error);
+    }
+  
 };
