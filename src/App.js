@@ -11,14 +11,15 @@ import Dashboard from "./components/Home/dashboard.component";
 import Layout from "./components/Layout/layout.component";
 import theme from "./theme/theme";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-  <Route path="/" element={<Layout />} errorElement={<NotFound/>}>
-   <Route index element={<Dashboard/>}></Route>
-  </Route>)
-);
+
 
 function App() {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+    <Route path="/" element={<Layout />} errorElement={<NotFound/>}>
+     <Route index element={<Dashboard/>}></Route>
+    </Route>)
+  );
   return (
   <ThemeProvider theme={theme}>
 <RouterProvider router={router} />
