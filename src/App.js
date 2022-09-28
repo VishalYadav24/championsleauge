@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@mui/material";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -8,6 +9,7 @@ import "./App.css";
 import NotFound from "./components/404/notfound.component";
 import Dashboard from "./components/Home/dashboard.component";
 import Layout from "./components/Layout/layout.component";
+import theme from "./theme/theme";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,7 +19,11 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+  <ThemeProvider theme={theme}>
+<RouterProvider router={router} />
+  </ThemeProvider>
+  );
 }
 
 export default App;
