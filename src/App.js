@@ -10,16 +10,17 @@ import NotFound from "./components/404/notfound.component";
 import Dashboard from "./components/Home/dashboard.component";
 import Layout from "./components/Layout/layout.component";
 import theme from "./theme/theme";
+import { getListOfChampions } from "./utils/api";
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+  <Route path="/" element={<Layout />} errorElement={<NotFound/>}>
+   <Route index element={<Dashboard/>} loader={getListOfChampions}></Route>
+  </Route>)
+);
 
 
 function App() {
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-    <Route path="/" element={<Layout />} errorElement={<NotFound/>}>
-     <Route index element={<Dashboard/>}></Route>
-    </Route>)
-  );
   return (
   <ThemeProvider theme={theme}>
 <RouterProvider router={router} />
