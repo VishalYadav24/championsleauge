@@ -1,5 +1,6 @@
 .MuiToolbar-regular{
-    background-color: #8D99AE;
+    background-color: #8D99AE
+    ;
     height:4rem
   
 }
@@ -16,8 +17,8 @@
     justify-content: end;
 }
 .MuiListItem-root.list_item_1 h3{
-    font-size: clamp(1rem, 2.5vw, 2rem); 
+    font-size: clamp(1rem, 2.5vw, 1.8rem); 
 }
 .logo{
-    width: clamp(1.2rem, 2.5vw, 2.5rem); ;
+    width: clamp(1.2rem, 2.5vw, 1.8rem); ;
 }

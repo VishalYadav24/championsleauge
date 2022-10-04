@@ -16,7 +16,7 @@ const Navbar = () => {
                     </ListItem>
                     <ListItem className='list_item_2'>
                     <IconButton>
-                            <img alt='watch list' className='logo' src={require("../../assets/file.png")}></img>
+                            <img alt='watch list' className='logo' src={require("../../assets/bookmark.png")}></img>
                         </IconButton>
                     </ListItem>
                 </List>
