@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import TableContent from "../Data Table/TableContent.component";
+import Navbar from "../Navbar/navbar.component";
 
 const headerConstant = [
   "id",
@@ -20,7 +21,8 @@ const Dashboard = () => {
   return (
     <Box bgcolor="background.paper" minHeight="100vh" color="#101011">
       Dashboard
-      <TableContent headerCells={columnHeaders} records={listOfChampions} />
+      {/* <TableContent headerCells={columnHeaders} records={listOfChampions} /> */}
+      <Navbar/>
     </Box>
   );
 };

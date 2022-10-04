@@ -8,6 +8,9 @@ const theme = createTheme({
         background:{
             default:"#19171e"
         }
+    },
+    background:{
+        default:'#8D99AE'
     }
 });
 
