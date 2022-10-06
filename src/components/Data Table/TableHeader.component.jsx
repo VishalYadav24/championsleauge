@@ -7,8 +7,8 @@ const TableHeader = ({
   orderDirection,
   handleRequestSort,
 }) => {
-  const createSortHandler = (property) => (event)=>{
-    handleRequestSort(event,property)
+  const createSortHandler = (property) => (event) => {
+    handleRequestSort(event, property);
   };
   return (
     <TableHead>
@@ -16,15 +16,19 @@ const TableHeader = ({
         {headerCells.map((data) => {
           return (
             <TableCell key={data?.key}>
-             {data?.disableSorting ? data?.label : <TableSortLabel
-                active={valueToOrderBy === data?.key}
-                direction={
-                  valueToOrderBy === data?.key ? orderDirection : "asc"
-                }
-                onClick={createSortHandler(data?.key)}
-              >
-                {data?.label}
-              </TableSortLabel>}
+              {data?.disableSorting ? (
+                data?.label
+              ) : (
+                <TableSortLabel
+                  active={valueToOrderBy === data?.key}
+                  direction={
+                    valueToOrderBy === data?.key ? orderDirection : "asc"
+                  }
+                  onClick={createSortHandler(data?.key)}
+                >
+                  {data?.label}
+                </TableSortLabel>
+              )}
             </TableCell>
           );
         })}

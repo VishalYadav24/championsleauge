@@ -1,10 +1,9 @@
-.MuiCardContent-root{
-    text-align: center;
+.MuiCardContent-root {
+  text-align: center;
 }
-.MuiCardContent-root img{
-    border-radius: 50%;
-    border: 3px double red;
-    object-fit: contain;
-    padding: .1REM;
-    
+.MuiCardContent-root img {
+  border-radius: 50%;
+  border: 3px double red;
+  object-fit: contain;
+  padding: 0.1rem;
 }

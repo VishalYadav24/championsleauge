@@ -22,23 +22,25 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
    * @param {*} value - number
    * @returns
    */
-   const normalise = (value) =>{
-     let max = 0;
-     let min = 0;
-   switch (true) {
-    
-    case (value  < 10): max=10;
-      
-      break;
-      case (value > 10 && value < 101): max =100;
-      break;
-      case (value > 100) : max = 1000;
-      break;
-    default:
-      break;
-   }
-   return ((value - min) * 100) / (max - min);
-   }
+  const normalise = (value) => {
+    let max = 0;
+    let min = 0;
+    switch (true) {
+      case value < 10:
+        max = 10;
+
+        break;
+      case value > 10 && value < 101:
+        max = 100;
+        break;
+      case value > 100:
+        max = 1000;
+        break;
+      default:
+        break;
+    }
+    return ((value - min) * 100) / (max - min);
+  };
   useEffect(() => {
     console.log(selectedHero);
     if (selectedHero) {
@@ -81,23 +83,38 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                   <CardContent>
                     <Box>
                       <Typography>HP</Typography>
-                      <Loader variant="determinate" value={normalise(data?.hp)}></Loader>
+                      <Loader
+                        variant="determinate"
+                        value={normalise(data?.hp)}
+                      ></Loader>
                     </Box>
                     <Box>
-                    <Typography>ARMOR</Typography>
-                    <Loader variant="determinate" value={normalise(data?.armor)}></Loader>
+                      <Typography>ARMOR</Typography>
+                      <Loader
+                        variant="determinate"
+                        value={normalise(data?.armor)}
+                      ></Loader>
                     </Box>
                     <Box>
-                    <Typography>ATTACK DAMAGE</Typography>
-                    <Loader variant="determinate" value={normalise(data?.attackdamage)}></Loader>
+                      <Typography>ATTACK DAMAGE</Typography>
+                      <Loader
+                        variant="determinate"
+                        value={normalise(data?.attackdamage)}
+                      ></Loader>
                     </Box>
                     <Box>
-                    <Typography>ATTACK RANGE</Typography>
-                    <Loader variant="determinate" value={normalise(data?.attackrange)}></Loader>
+                      <Typography>ATTACK RANGE</Typography>
+                      <Loader
+                        variant="determinate"
+                        value={normalise(data?.attackrange)}
+                      ></Loader>
                     </Box>
                     <Box>
-                    <Typography>MOVE SPEED</Typography>
-                    <Loader variant="determinate" value={normalise(data?.movespeed)}></Loader>
+                      <Typography>MOVE SPEED</Typography>
+                      <Loader
+                        variant="determinate"
+                        value={normalise(data?.movespeed)}
+                      ></Loader>
                     </Box>
                   </CardContent>
                 </Card>

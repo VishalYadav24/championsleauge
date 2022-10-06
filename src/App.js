@@ -15,19 +15,18 @@ import { getListOfChampions } from "./utils/api";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-  <Route path="/" element={<Layout />} errorElement={<NotFound/>}>
-   <Route index element={<Dashboard/>} loader={getListOfChampions}>
-   </Route>
-   <Route path="favorites" element={<WatchList/>}></Route>
-  </Route>)
+    <Route path="/" element={<Layout />} errorElement={<NotFound />}>
+      <Route index element={<Dashboard />} loader={getListOfChampions}></Route>
+      <Route path="favorites" element={<WatchList />}></Route>
+    </Route>
+  )
 );
-
 
 function App() {
   return (
-  <ThemeProvider theme={theme}>
-<RouterProvider router={router} />
-  </ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }
 

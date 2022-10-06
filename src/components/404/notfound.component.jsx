@@ -1,11 +1,9 @@
-import React from 'react'
-import { useRouteError } from 'react-router-dom'
+import React from "react";
+import { useRouteError } from "react-router-dom";
 
 const NotFound = () => {
   const error = useRouteError();
-  return (
-    <div>NotFound {error?.message}</div>
-  )
-}
+  return <div>NotFound {error?.message}</div>;
+};
 
-export default NotFound
+export default NotFound;
