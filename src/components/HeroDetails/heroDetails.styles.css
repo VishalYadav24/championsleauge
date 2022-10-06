@@ -29,4 +29,6 @@ background-color: white;
   .MuiCardContent-root .MuiBox-root .specs .MuiTypography-root{
      /* font-size: .8rem;  */
   }
-
+  .logo {
+    width: clamp(1.2rem, 2.5vw, 1.8rem);
+  }

@@ -4,9 +4,12 @@ import {
   Button,
   Card,
   CardActionArea,
+  CardActions,
   CardContent,
+  CardHeader,
   Divider,
   Fade,
+  IconButton,
   Modal,
   Typography,
 } from "@mui/material";
@@ -87,9 +90,13 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                   </CardContent>
 
                   <CardContent>
-                    <Box>
+                    <Box sx={{display:"flex",justifyContent:"space-between"}}>
                       <Typography variant="h4"> {data?.name}</Typography>
+                      <IconButton>
+                        <img className="logo" alt={data?.name} src={require("../../assets/file.png")}></img>
+                      </IconButton>
                     </Box>
+                    <Divider></Divider>
                     <Box>
                       <Box className="specs">
                         <Typography>HP</Typography>
@@ -146,6 +153,7 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                 </Card>
               );
             })}
+            <Box></Box>
           </Box>
         </Fade>
       </Modal>
