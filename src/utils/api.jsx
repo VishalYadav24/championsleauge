@@ -23,3 +23,20 @@ export const getListOfChampions = async() => {
     }
   
 };
+
+export const getChampion = async(championName)=>{
+    const config = {
+        params:{
+            "search[name]":championName,
+            "token":API_KEY
+        }
+    }
+    try{
+
+        const response = await axios.get(`${baseUrl}`,config);
+        return  response?.data;
+    }
+    catch(error){
+        throw(error);
+    }
+}
