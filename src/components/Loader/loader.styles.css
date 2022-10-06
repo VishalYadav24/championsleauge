@@ -1,0 +1,5 @@
+.MuiLinearProgress-root.MuiLinearProgress-determinate{
+    height:10px;
+    border-radius: 50px;
+    width:100%
+}

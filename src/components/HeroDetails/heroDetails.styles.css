@@ -1,0 +1,32 @@
+.MuiBox-root.box{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+background-color: black;
+opacity: .9;
+}
+
+.MuiCard-root.hero_container{
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: .9;
+background-color: white;
+}
+
+.MuiCardContent-root img.hero_full_image{
+    width:  clamp(3rem, 40vw, 12rem); 
+  }
+
+  .MuiCardContent-root .MuiBox-root .specs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: red;
+    width:  clamp(3rem, 40vw, 12rem); 
+  }
+  .MuiCardContent-root .MuiBox-root .specs .MuiTypography-root{
+     /* font-size: .8rem;  */
+  }
+

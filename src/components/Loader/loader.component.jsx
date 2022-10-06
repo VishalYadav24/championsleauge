@@ -1,6 +1,6 @@
 import { LinearProgress } from "@mui/material";
 import React, { Fragment } from "react";
-
+import './loader.styles.css'
 const Loader = ({ variant, value, sx, size, thickness, color }) => {
   return (
     <Fragment>

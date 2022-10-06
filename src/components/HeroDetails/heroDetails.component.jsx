@@ -13,6 +13,7 @@ import {
 import React, { Fragment, useEffect, useState } from "react";
 import { getChampion } from "../../utils/api";
 import Loader from "../Loader/loader.component";
+import "./heroDetails.styles.css";
 
 const HeroDetails = ({ selectedHero, open, setOpen }) => {
   const [heroDetails, setHeroDetails] = useState(null);
@@ -22,7 +23,7 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
    * @param {*} value - number
    * @returns
    */
-  const normalise = (value) => {
+  const normalize = (value) => {
     let max = 0;
     let min = 0;
     switch (true) {
@@ -69,51 +70,76 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
         BackdropProps={{
           timeout: 1000,
         }}
+
+        // sx={{display:{xl:"flex",lg:"flex",md:"flex",sm:"flex",xs:"flex"}}}
       >
         <Fade in={open}>
-          <Box>
+          <Box className="box">
             {heroDetails?.map((data) => {
               return (
-                <Card key={data?.id}>
-                  <CardActionArea>
-                    <Typography variant="h4">{data?.name}</Typography>
-                    <img alt={data?.name} src={data?.big_image_url}></img>
-                  </CardActionArea>
-                  <Divider></Divider>
+                <Card key={data?.id} className="hero_container">
+                  <CardContent>
+                    <img
+                      className="hero_full_image"
+                      alt={data?.name}
+                      src={data?.big_image_url}
+                    ></img>
+                  </CardContent>
+
                   <CardContent>
                     <Box>
-                      <Typography>HP</Typography>
+                      <Typography variant="h4"> {data?.name}</Typography>
+                    </Box>
+                    <Box>
+                      <Box className="specs">
+                        <Typography>HP</Typography>
+                        <Typography>{data?.hp}</Typography>
+                      </Box>
+
                       <Loader
                         variant="determinate"
-                        value={normalise(data?.hp)}
+                        value={normalize(data?.hp)}
                       ></Loader>
                     </Box>
                     <Box>
-                      <Typography>ARMOR</Typography>
+                      <Box className="specs">
+                        <Typography>ARMOR</Typography>
+                        <Typography>{data?.armor}</Typography>
+                      </Box>
                       <Loader
                         variant="determinate"
-                        value={normalise(data?.armor)}
+                        value={normalize(data?.armor)}
                       ></Loader>
                     </Box>
                     <Box>
-                      <Typography>ATTACK DAMAGE</Typography>
+                      <Box className="specs">
+                        <Typography>ATTACK DAMAGE</Typography>
+                        <Typography>{data?.attackdamage}</Typography>
+                      </Box>
                       <Loader
                         variant="determinate"
-                        value={normalise(data?.attackdamage)}
+                        value={normalize(data?.attackdamage)}
                       ></Loader>
                     </Box>
                     <Box>
-                      <Typography>ATTACK RANGE</Typography>
+                      <Box className="specs">
+                        <Typography>ATTACK RANGE</Typography>
+                        <Typography>{data?.attackrange}</Typography>
+                      </Box>
+
                       <Loader
                         variant="determinate"
-                        value={normalise(data?.attackrange)}
+                        value={normalize(data?.attackrange)}
                       ></Loader>
                     </Box>
                     <Box>
-                      <Typography>MOVE SPEED</Typography>
+                      <Box className="specs">
+                        <Typography>MOVE SPEED</Typography>
+                        <Typography>{data?.movespeed}</Typography>
+                      </Box>
                       <Loader
                         variant="determinate"
-                        value={normalise(data?.movespeed)}
+                        value={normalize(data?.movespeed)}
                       ></Loader>
                     </Box>
                   </CardContent>

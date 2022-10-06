@@ -30,7 +30,7 @@ const HerosList = ({ herosList }) => {
                 sx={{ margin: ".5rem", alignSelf: "center" }}
               >
                 <CardContent>
-                  <img alt={data?.name} src={data?.image}></img>
+                  <img className="hero_image" alt={data?.name} src={data?.image}></img>
                 </CardContent>
                 <CardContent>
                   <Typography sx={{ fontSize: "1rem", fontWeight: "bold" }}>
