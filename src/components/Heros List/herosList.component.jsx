@@ -27,7 +27,7 @@ const HerosList = ({ herosList }) => {
             return (
               <Card
                 key={data?.id}
-                sx={{ margin: ".5rem", alignSelf: "center",background:"#222025",width:"200px" }}
+                sx={{ margin: ".5rem", alignSelf: "center",background:"#222025",width:"13rem" }}
               >
                 <CardContent>
                   <img className="hero_image" alt={data?.name} src={data?.image}></img>
@@ -37,7 +37,7 @@ const HerosList = ({ herosList }) => {
                     {data?.name}
                   </Typography>
                 </CardContent>
-                <CardActions>
+                <CardActions sx={{padding:"0"}}>
                   <IconButton
                     onClick={() => {
                       setSelectedHero(data?.name);

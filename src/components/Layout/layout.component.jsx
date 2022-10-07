@@ -5,7 +5,7 @@ import Navbar from "../Navbar/navbar.component";
 
 const Layout = () => {
   return (
-    <Stack spacing={10}>
+    <Stack spacing={10} sx={{background:"#19171E"}}>
       <Navbar></Navbar>
       <Outlet />
     </Stack>
