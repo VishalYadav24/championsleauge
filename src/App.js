@@ -36,7 +36,7 @@ function App() {
           }
           loader={getListOfChampions}
         ></Route>
-        <Route path="favorites" element={<WatchList />}></Route>
+        <Route path="favorite" element={<WatchList />}></Route>
       </Route>
     )
   );

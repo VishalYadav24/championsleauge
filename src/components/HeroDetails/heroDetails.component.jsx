@@ -73,8 +73,6 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
         BackdropProps={{
           timeout: 1000,
         }}
-
-        // sx={{display:{xl:"flex",lg:"flex",md:"flex",sm:"flex",xs:"flex"}}}
       >
         <Fade in={open}>
           <Box className="box">
