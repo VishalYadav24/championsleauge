@@ -12,7 +12,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 opacity: .9;
-background-color: white;
+background-color: #8338EC;
 }
 
 .MuiCardContent-root img.hero_full_image{
@@ -23,7 +23,7 @@ background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: red;
+    color: #F3F7F0;
     width:  clamp(3rem, 40vw, 12rem); 
   }
   .MuiCardContent-root .MuiBox-root .specs .MuiTypography-root{

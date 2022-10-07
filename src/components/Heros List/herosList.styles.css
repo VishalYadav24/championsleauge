@@ -1,9 +1,25 @@
+
+
 .MuiCardContent-root {
   text-align: center;
+  color: #E0E2DB;
+  
 }
 .MuiCardContent-root img.hero_image {
   border-radius: 50%;
-  border: 3px double red;
+  border-style: solid;
+  border: 5px double #F3F7F0;
   object-fit: contain;
   padding: 0.1rem;
+}
+.MuiCardContent-root img.hero_image:hover {
+  border: 5px double #F84982;
+
+}
+.MuiCard-root:hover {
+  text-align: center;
+  color: #E0E2DB;
+  transform: scale(1.1);
+  transition: transform .4s ease;
+  
 }
