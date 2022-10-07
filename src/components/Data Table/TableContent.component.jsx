@@ -38,6 +38,7 @@ const sortRowInformation = (rowArray, comparator) => {
 };
 
 const TableContent = ({ headerCells, records }) => {
+  console.log(records)
   const [orderDirection, setOrderDirection] = useState("asc");
   const [valueToOrderBy, setValueToOrderBy] = useState(headerCells[0].key);
   const [page, setPage] = useState(0);

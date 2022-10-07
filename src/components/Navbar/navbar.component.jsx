@@ -7,8 +7,10 @@ import {
   Toolbar,
 } from "@mui/material";
 import React, { Fragment } from "react";
+import { useNavigate } from "react-router-dom";
 import "./navbar.styles.css";
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <Fragment>
       <AppBar>
@@ -25,7 +27,7 @@ const Navbar = () => {
               <h3>Game Store</h3>
             </ListItem>
             <ListItem className="list_item_2">
-              <IconButton>
+              <IconButton onClick={()=> navigate("/favorite")} >
                 <img
                   alt="watch list"
                   className="logo"

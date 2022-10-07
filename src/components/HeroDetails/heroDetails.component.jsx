@@ -13,7 +13,8 @@ import {
   Modal,
   Typography,
 } from "@mui/material";
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
+import { HerosContext } from "../../context/heroscontext";
 import { getChampion } from "../../utils/api";
 import Loader from "../Loader/loader.component";
 import "./heroDetails.styles.css";
@@ -21,6 +22,8 @@ import "./heroDetails.styles.css";
 const HeroDetails = ({ selectedHero, open, setOpen }) => {
   const [heroDetails, setHeroDetails] = useState(null);
   const handleClose = () => setOpen(false);
+  const {addHero} = useContext(HerosContext);
+  
   /**
    * Method for conversion of custom values (numbers) to scale of 0 to 100 for progress bar/circle.
    * @param {*} value - number
@@ -90,7 +93,7 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                   <CardContent>
                     <Box sx={{display:"flex",justifyContent:"space-between"}}>
                       <Typography variant="h4"> {data?.name}</Typography>
-                      <IconButton>
+                      <IconButton onClick={()=> addHero(data)}>
                         <img className="logo" alt={data?.name} src={require("../../assets/file.png")}></img>
                       </IconButton>
                     </Box>

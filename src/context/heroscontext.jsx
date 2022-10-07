@@ -5,8 +5,11 @@ import { createContext, useState } from "react";
 
 const HerosProvider = ({children})=>{
     const [favoriteHero,setFavoriteHero] = useState([]);
+    const addHero = (value)=>{
+      setFavoriteHero((prev)=>{return [...prev,value]})
+    }
     return (
-        <HerosContext.Provider value={{favoriteHero,setFavoriteHero}} >{children}</HerosContext.Provider>
+        <HerosContext.Provider value={{favoriteHero,setFavoriteHero,addHero}} >{children}</HerosContext.Provider>
     )
 }
 

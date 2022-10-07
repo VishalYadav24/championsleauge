@@ -36,7 +36,7 @@ const Dashboard = () => {
     <Box bgcolor="background.paper" minHeight="100vh" color="#101011">
       Dashboard
       {/* <TableContent headerCells={columnHeaders} records={listOfChampions} /> */}
-      {/* <Navbar/> */}
+      <Navbar/>
       <HerosList herosList={herosList} />
     </Box>
   );
