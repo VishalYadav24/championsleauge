@@ -1,3 +1,4 @@
+import { BookmarkAddOutlined } from "@mui/icons-material";
 import {
   Backdrop,
   Box,
@@ -17,7 +18,7 @@ import React, { Fragment, useContext, useEffect, useState } from "react";
 import { HerosContext } from "../../context/heroscontext";
 import { getChampion } from "../../utils/api";
 import Loader from "../Loader/loader.component";
-import "./heroDetails.styles.css";
+import "./heroDetails.styles.scss";
 
 const HeroDetails = ({ selectedHero, open, setOpen }) => {
   const [heroDetails, setHeroDetails] = useState(null);
@@ -93,8 +94,8 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                   <CardContent>
                     <Box sx={{display:"flex",justifyContent:"space-between"}}>
                       <Typography variant="h4"> {data?.name}</Typography>
-                      <IconButton onClick={()=> addHero(data)}>
-                        <img className="logo" alt={data?.name} src={require("../../assets/file.png")}></img>
+                      <IconButton className="icon" onClick={()=> addHero(data)}>
+                        <BookmarkAddOutlined />
                       </IconButton>
                     </Box>
                     <Divider></Divider>
@@ -138,6 +139,7 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                       <Loader
                         variant="determinate"
                         value={normalize(data?.attackrange)}
+                      
                       ></Loader>
                     </Box>
                     <Box>

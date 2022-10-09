@@ -1,9 +1,10 @@
+@import '../../styles/variables.styles.scss';
 .MuiBox-root.box{
 display: flex;
 justify-content: center;
 align-items: center;
 height: 100%;
-background-color: black;
+background-color: $primary;
 opacity: .9;
 }
 
@@ -12,7 +13,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 opacity: .9;
-background-color: #8338EC;
+background-color: $secondary;
 }
 
 .MuiCardContent-root img.hero_full_image{
@@ -23,7 +24,7 @@ background-color: #8338EC;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: #F3F7F0;
+    color: $neutral;
     width:  clamp(3rem, 40vw, 12rem); 
   }
   .MuiCardContent-root .MuiBox-root .specs .MuiTypography-root{
@@ -32,3 +33,6 @@ background-color: #8338EC;
   .logo {
     width: clamp(1.2rem, 2.5vw, 1.8rem);
   }
+.MuiIconButton-root.icon{
+  color: $accent;
+}

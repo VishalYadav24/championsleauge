@@ -1,6 +1,6 @@
 import { LinearProgress } from "@mui/material";
 import React, { Fragment } from "react";
-import './loader.styles.css'
+import './loader.styles.scss'
 const Loader = ({ variant, value, sx, size, thickness, color }) => {
   return (
     <Fragment>
@@ -11,6 +11,7 @@ const Loader = ({ variant, value, sx, size, thickness, color }) => {
         value={value}
         sx={sx}
         color={color}
+        className="progress"
       />
     </Fragment>
   );
