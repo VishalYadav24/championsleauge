@@ -33,7 +33,7 @@ const Dashboard = () => {
     setHerosList(minimalList);
   }, []);
   return (
-    <Box bgcolor="#19171E" minHeight="100vh">
+    <Box minHeight="100vh">
       Dashboard
       {/* <TableContent headerCells={columnHeaders} records={listOfChampions} /> */}
       <Navbar/>
