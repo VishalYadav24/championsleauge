@@ -1,5 +1,6 @@
+@import '../../styles/variables.styles.scss';
 .MuiToolbar-regular {
-  background-color: #8338EC;
+  background-color: $secondary;
   height: 4rem;
 }
 .list_container {
@@ -16,6 +17,7 @@
 }
 .MuiListItem-root.list_item_1 h3 {
   font-size: clamp(1rem, 2.5vw, 1.8rem);
+  color: $neutral;
 }
 .logo {
   width: clamp(1.2rem, 2.5vw, 1.8rem);

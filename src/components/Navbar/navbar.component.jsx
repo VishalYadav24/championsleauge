@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import React, { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
-import "./navbar.styles.css";
+import "./navbar.styles.scss";
 const Navbar = () => {
   const navigate = useNavigate();
   return (
