@@ -34,7 +34,6 @@ const Dashboard = () => {
   }, []);
   return (
     <Box minHeight="100vh">
-      Dashboard
       {/* <TableContent headerCells={columnHeaders} records={listOfChampions} /> */}
       <Navbar/>
       <HerosList herosList={herosList} />
