@@ -76,7 +76,7 @@ const TableContent = ({ headerCells, records }) => {
               records,
               getComparator(orderDirection, valueToOrderBy)
             )
-              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              ?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               ?.map((data) => {
                 return (
                   <TableRow key={data?.id}>
@@ -101,7 +101,7 @@ const TableContent = ({ headerCells, records }) => {
       <TablePagination
         rowsPerPageOptions={[5, 10, 15]}
         component="div"
-        count={records.length}
+        count={records?.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handlePageChange}
