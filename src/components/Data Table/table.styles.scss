@@ -1,0 +1,12 @@
+@import '../../styles/variables.styles.scss';
+
+.MuiBox-root.contaianers{
+ min-height: 100vh;
+ min-width: 100vw;
+}
+
+.MuiTableContainer-root.table_container{
+  background-color: $neutral;
+  width:clamp(10rem,70vw,60rem);
+
+}

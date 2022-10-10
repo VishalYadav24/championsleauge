@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Table,
   TableBody,
@@ -10,7 +11,7 @@ import {
 import React, { Fragment, useContext, useState } from "react";
 import { HerosContext } from "../../context/heroscontext";
 import TableHeader from "./TableHeader.component";
-
+import './table.styles.scss'
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
     return -1;
@@ -62,8 +63,8 @@ const TableContent = ({ headerCells, records }) => {
    setFavoriteHero((prev)=> prev.filter(data=> data.id !== id));
   }
   return (
-    <Fragment>
-      <TableContainer>
+    <Box className="contaianers">
+      <TableContainer className="table_container">
         <Table>
           <TableHeader
             headerCells={headerCells}
@@ -97,8 +98,7 @@ const TableContent = ({ headerCells, records }) => {
               })}
           </TableBody>
         </Table>
-      </TableContainer>
-      <TablePagination
+        <TablePagination
         rowsPerPageOptions={[5, 10, 15]}
         component="div"
         count={records?.length}
@@ -107,7 +107,9 @@ const TableContent = ({ headerCells, records }) => {
         onPageChange={handlePageChange}
         onRowsPerPageChange={handleRowsPerPageChange}
       ></TablePagination>
-    </Fragment>
+      </TableContainer>
+     
+    </Box>
   );
 };
 
