@@ -1,4 +1,5 @@
 import {
+  Button,
   Table,
   TableBody,
   TableCell,
@@ -6,7 +7,8 @@ import {
   TablePagination,
   TableRow,
 } from "@mui/material";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useContext, useState } from "react";
+import { HerosContext } from "../../context/heroscontext";
 import TableHeader from "./TableHeader.component";
 
 function descendingComparator(a, b, orderBy) {
@@ -27,23 +29,22 @@ function getComparator(order, orderBy) {
 }
 
 const sortRowInformation = (rowArray, comparator) => {
-  const stabilizedRowArray = rowArray.map((el, index) => [el, index]);
+  const stabilizedRowArray = rowArray?.map((el, index) => [el, index]);
 
-  stabilizedRowArray.sort((a, b) => {
+  stabilizedRowArray?.sort((a, b) => {
     const order = comparator(a[0], b[0]);
     if (order !== 0) return order;
     return a[1] - b[1];
   });
-  return stabilizedRowArray.map((el) => el[0]);
+  return stabilizedRowArray?.map((el) => el[0]);
 };
 
 const TableContent = ({ headerCells, records }) => {
-  console.log(records)
   const [orderDirection, setOrderDirection] = useState("asc");
   const [valueToOrderBy, setValueToOrderBy] = useState(headerCells[0].key);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
-
+  const {setFavoriteHero} = useContext(HerosContext)
   const handleRequestSort = (event, property) => {
     const isAscending = valueToOrderBy === property && orderDirection === "asc";
     setValueToOrderBy(property);
@@ -57,6 +58,9 @@ const TableContent = ({ headerCells, records }) => {
     setRowsPerPage(parseInt(event.target.value), 10);
     setPage(0);
   };
+  const handleRemoveRecord = (id)=>{
+   setFavoriteHero((prev)=> prev.filter(data=> data.id !== id));
+  }
   return (
     <Fragment>
       <TableContainer>
@@ -87,6 +91,7 @@ const TableContent = ({ headerCells, records }) => {
                     <TableCell>{data?.attackrange}</TableCell>
                     <TableCell>{data?.hpregen}</TableCell>
                     <TableCell>{data?.spellblock}</TableCell>
+                    {data &&<TableCell><Button variant="contained" color="error" onClick={()=> handleRemoveRecord(data?.id)}>Remove</Button></TableCell>}
                   </TableRow>
                 );
               })}

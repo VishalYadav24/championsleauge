@@ -14,6 +14,7 @@ const WatchList = () => {
     "attackrange",
     "hpregen",
     "spellblock",
+    "actions"
   ];
   const columnHeaders = headerConstant.map((data) => {
     return {
