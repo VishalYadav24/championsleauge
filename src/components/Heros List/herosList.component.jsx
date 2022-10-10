@@ -10,7 +10,7 @@ import {
 import { Box } from "@mui/system";
 import React, { Fragment, useState } from "react";
 import HeroDetails from "../HeroDetails/heroDetails.component";
-import "./herosList.styles.css";
+import "./herosList.styles.scss";
 const HerosList = ({ herosList }) => {
   const [selectedHero, setSelectedHero] = useState("");
   const [open, setOpen] = React.useState(false);
@@ -27,7 +27,7 @@ const HerosList = ({ herosList }) => {
             return (
               <Card
                 key={data?.id}
-                sx={{ margin: ".5rem", alignSelf: "center",background:"#222025",width:"13rem" }}
+                className="hero_list"
               >
                 <CardContent>
                   <img className="hero_image" alt={data?.name} src={data?.image}></img>
@@ -43,8 +43,9 @@ const HerosList = ({ herosList }) => {
                       setSelectedHero(data?.name);
                       setOpen(true);
                     }}
+                    
                   >
-                    <RemoveRedEye sx={{color:"#F84982"}} />
+                    <RemoveRedEye className="icon" sx={{color:"#F84982"}} />
                   </IconButton>
                 </CardActions>
               </Card>
