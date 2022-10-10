@@ -1,4 +1,4 @@
-import { BookmarkAddOutlined } from "@mui/icons-material";
+import { BookmarkAddOutlined, BookmarkRemoveOutlined } from "@mui/icons-material";
 import {
   Backdrop,
   Box,
@@ -23,8 +23,9 @@ import "./heroDetails.styles.scss";
 const HeroDetails = ({ selectedHero, open, setOpen }) => {
   const [heroDetails, setHeroDetails] = useState(null);
   const handleClose = () => setOpen(false);
-  const {addHero} = useContext(HerosContext);
-  
+  const { addHero, setIsHeroPresent, isHeroPresent, checkIsHeroPresent,handleRemoveRecord } =
+    useContext(HerosContext);
+
   /**
    * Method for conversion of custom values (numbers) to scale of 0 to 100 for progress bar/circle.
    * @param {*} value - number
@@ -92,11 +93,22 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                   </CardContent>
 
                   <CardContent>
-                    <Box sx={{display:"flex",justifyContent:"space-between"}}>
+                    <Box
+                      sx={{ display: "flex", justifyContent: "space-between" }}
+                    >
                       <Typography variant="h4"> {data?.name}</Typography>
-                      <IconButton className="icon" onClick={()=> addHero(data)}>
-                        <BookmarkAddOutlined />
-                      </IconButton>
+                      {checkIsHeroPresent(data?.id) ? (
+                        <IconButton className="icon" onClick={()=>handleRemoveRecord(data?.id)}>
+                          <BookmarkRemoveOutlined/>
+                        </IconButton>
+                      ) : (
+                        <IconButton
+                          className="icon"
+                          onClick={() => addHero(data)}
+                        >
+                          <BookmarkAddOutlined />
+                        </IconButton>
+                      )}
                     </Box>
                     <Divider></Divider>
                     <Box>
@@ -139,7 +151,6 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                       <Loader
                         variant="determinate"
                         value={normalize(data?.attackrange)}
-                      
                       ></Loader>
                     </Box>
                     <Box>
