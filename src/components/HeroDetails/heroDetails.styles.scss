@@ -15,6 +15,7 @@ align-items: center;
 opacity: .9;
 background-color: $secondary;
 flex-wrap: wrap;
+flex-direction: column;
 }
 
 .MuiCardContent-root img.hero_full_image{
@@ -32,7 +33,7 @@ flex-wrap: wrap;
      /* font-size: .8rem;  */
   }
   .logo {
-    width: clamp(1.2rem, 2.5vw, 1.8rem);
+    // width: clamp(1.2rem, 2.5vw, 1.8rem);
   }
 .MuiIconButton-root.icon{
   color: $accent;

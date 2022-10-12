@@ -40,7 +40,7 @@ export const getChampion = async (championName) => {
   try {
     const response = await axios.get(`${baseUrl}`, config);
     const additionalResponse = await axios.get(`${additionalDataURL}`,additionalConfig);
-    const introduction = {"description":additionalResponse.data[0]?.introduction};
+    const introduction = {"description":additionalResponse.data[0]?.introduction,"image":additionalResponse.data[0]?.image};
     const finalResponse = [{...response.data[0],...introduction}];
     if(response && additionalResponse){
       return finalResponse;
