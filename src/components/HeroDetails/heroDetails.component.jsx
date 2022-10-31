@@ -19,7 +19,10 @@ import {
   Grid,
   IconButton,
   Modal,
+  Stack,
+  Tooltip,
   Typography,
+  Zoom,
 } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { Fragment, useContext, useEffect, useState } from "react";
@@ -91,203 +94,315 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
         BackdropProps={{
           timeout: 1000,
         }}
+      
       >
         <Fade in={open}>
           <Box className="box">
             {heroDetails?.map((data) => {
               return (
-                <Card key={data?.id} className="hero_container">
-                  {/* <CardContent sx={{ display: "flex" }}>
-                    <img
-                      className="hero_full_image"
-                      alt={data?.name}
-                      src={data?.big_image_url}
-                    ></img>
-                    <p>{data?.description}</p>
-                  </CardContent> */}
+                // <Card key={data?.id} className="hero_container">
+                //   {/* <CardContent sx={{ display: "flex" }}>
+                //     <img
+                //       className="hero_full_image"
+                //       alt={data?.name}
+                //       src={data?.big_image_url}
+                //     ></img>
+                //     <p>{data?.description}</p>
+                //   </CardContent> */}
 
-                  {/* <CardContent>
-                    <Box
-                      sx={{ display: "flex", justifyContent: "space-between" }}
-                    >
-                      <Typography variant="h4"> {data?.name}</Typography>
-                      {checkIsHeroPresent(data?.id) ? (
-                        <IconButton
-                          className="icon"
-                          onClick={() => handleRemoveRecord(data?.id)}
-                        >
-                          <BookmarkRemoveOutlined />
-                        </IconButton>
-                      ) : (
-                        <IconButton
-                          className="icon"
-                          onClick={() => addHero(data)}
-                        >
-                          <BookmarkAddOutlined />
-                        </IconButton>
-                      )}
-                    </Box>
-                    <Divider></Divider>
-                    <Box>
-                      <Box className="specs">
-                        <Typography>HP</Typography>
-                        <Typography>{data?.hp}</Typography>
-                      </Box>
+                //   {/* <CardContent>
+                //     <Box
+                //       sx={{ display: "flex", justifyContent: "space-between" }}
+                //     >
+                //       <Typography variant="h4"> {data?.name}</Typography>
+                //       {checkIsHeroPresent(data?.id) ? (
+                //         <IconButton
+                //           className="icon"
+                //           onClick={() => handleRemoveRecord(data?.id)}
+                //         >
+                //           <BookmarkRemoveOutlined />
+                //         </IconButton>
+                //       ) : (
+                //         <IconButton
+                //           className="icon"
+                //           onClick={() => addHero(data)}
+                //         >
+                //           <BookmarkAddOutlined />
+                //         </IconButton>
+                //       )}
+                //     </Box>
+                //     <Divider></Divider>
+                //     <Box>
+                //       <Box className="specs">
+                //         <Typography>HP</Typography>
+                //         <Typography>{data?.hp}</Typography>
+                //       </Box>
 
-                      <Loader
-                        variant="determinate"
-                        value={normalize(data?.hp)}
-                      ></Loader>
-                    </Box>
-                    <Box>
-                      <Box className="specs">
-                        <Typography>ARMOR</Typography>
-                        <Typography>{data?.armor}</Typography>
-                      </Box>
-                      <Loader
-                        variant="determinate"
-                        value={normalize(data?.armor)}
-                      ></Loader>
-                    </Box>
-                    <Box>
-                      <Box className="specs">
-                        <Typography>ATTACK DAMAGE</Typography>
-                        <Typography>{data?.attackdamage}</Typography>
-                      </Box>
-                      <Loader
-                        variant="determinate"
-                        value={normalize(data?.attackdamage)}
-                      ></Loader>
-                    </Box>
-                    <Box>
-                      <Box className="specs">
-                        <Typography>ATTACK RANGE</Typography>
-                        <Typography>{data?.attackrange}</Typography>
-                      </Box>
+                //       <Loader
+                //         variant="determinate"
+                //         value={normalize(data?.hp)}
+                //       ></Loader>
+                //     </Box>
+                //     <Box>
+                //       <Box className="specs">
+                //         <Typography>ARMOR</Typography>
+                //         <Typography>{data?.armor}</Typography>
+                //       </Box>
+                //       <Loader
+                //         variant="determinate"
+                //         value={normalize(data?.armor)}
+                //       ></Loader>
+                //     </Box>
+                //     <Box>
+                //       <Box className="specs">
+                //         <Typography>ATTACK DAMAGE</Typography>
+                //         <Typography>{data?.attackdamage}</Typography>
+                //       </Box>
+                //       <Loader
+                //         variant="determinate"
+                //         value={normalize(data?.attackdamage)}
+                //       ></Loader>
+                //     </Box>
+                //     <Box>
+                //       <Box className="specs">
+                //         <Typography>ATTACK RANGE</Typography>
+                //         <Typography>{data?.attackrange}</Typography>
+                //       </Box>
 
-                      <Loader
-                        variant="determinate"
-                        value={normalize(data?.attackrange)}
-                      ></Loader>
-                    </Box>
-                    <Box>
-                      <Box className="specs">
-                        <Typography>MOVE SPEED</Typography>
-                        <Typography>{data?.movespeed}</Typography>
-                      </Box>
-                      <Loader
-                        variant="determinate"
-                        value={normalize(data?.movespeed)}
-                      ></Loader>
-                    </Box>
-                  </CardContent> */}
-                  <CardContent>
-                    <Container component="section" maxWidth="lg">
-                      <Grid container spacing={3} alignItems="stretch">
-                        <Grid item xs={12} sm={3} md={6}>
-                          <img
-                            className="hero_full_image"
-                            alt={data?.name}
-                            src={data?.image?.banner || data?.big_image_url}
-                          ></img>
-                        </Grid>
-                        <Grid item xs={12} sm={3} md={6}>
-                          <Box
-                            sx={{
-                              display: "flex",
-                              justifyContent: "space-between",
-                            }}
-                          >
+                //       <Loader
+                //         variant="determinate"
+                //         value={normalize(data?.attackrange)}
+                //       ></Loader>
+                //     </Box>
+                //     <Box>
+                //       <Box className="specs">
+                //         <Typography>MOVE SPEED</Typography>
+                //         <Typography>{data?.movespeed}</Typography>
+                //       </Box>
+                //       <Loader
+                //         variant="determinate"
+                //         value={normalize(data?.movespeed)}
+                //       ></Loader>
+                //     </Box>
+                //   </CardContent> */}
+                //   <CardContent>
+                //     <Container component="section" maxWidth="lg">
+                //       <Grid container spacing={3} alignItems="stretch">
+                //         <Grid item xs={12} sm={3} md={6}>
+                //           <img
+                //             className="hero_full_image"
+                //             alt={data?.name}
+                //             src={data?.image?.banner || data?.big_image_url}
+                //           ></img>
+                //         </Grid>
+                //         <Grid item xs={12} sm={3} md={6}>
+                //           <Box
+                //             sx={{
+                //               display: "flex",
+                //               justifyContent: "space-between",
+                //             }}
+                //           >
+                //             <Typography variant="h4"> {data?.name}</Typography>
+                //             {checkIsHeroPresent(data?.id) ? (
+                //               <IconButton
+                //                 className="icon"
+                //                 onClick={() => handleRemoveRecord(data?.id)}
+                //               >
+                //                 <BookmarkRemoveOutlined />
+                //               </IconButton>
+                //             ) : (
+                //               <IconButton
+                //                 className="icon"
+                //                 onClick={() => addHero(data)}
+                //               >
+                //                 <BookmarkAddOutlined />
+                //               </IconButton>
+                //             )}
+                //           </Box>
+                //           <Box>
+                //           <p>{data?.description}</p>
+                //           </Box>
+                //           <Box>
+                //             <Box className="specs">
+                //               <Typography>HP</Typography>
+                //               <Typography>{data?.hp}</Typography>
+                //             </Box>
+
+                //             <Loader
+                //               variant="determinate"
+                //               value={normalize(data?.hp)}
+                //             ></Loader>
+                //           </Box>
+                //           <Box>
+                //             <Box className="specs">
+                //               <Typography>ARMOR</Typography>
+                //               <Typography>{data?.armor}</Typography>
+                //             </Box>
+                //             <Loader
+                //               variant="determinate"
+                //               value={normalize(data?.armor)}
+                //             ></Loader>
+                //           </Box>
+                //           <Box>
+                //             <Box className="specs">
+                //               <Typography>ATTACK DAMAGE</Typography>
+                //               <Typography>{data?.attackdamage}</Typography>
+                //             </Box>
+                //             <Loader
+                //               variant="determinate"
+                //               value={normalize(data?.attackdamage)}
+                //             ></Loader>
+                //           </Box>
+                //           <Box>
+                //             <Box className="specs">
+                //               <Typography>ATTACK RANGE</Typography>
+                //               <Typography>{data?.attackrange}</Typography>
+                //             </Box>
+
+                //             <Loader
+                //               variant="determinate"
+                //               value={normalize(data?.attackrange)}
+                //             ></Loader>
+                //           </Box>
+                //           <Box>
+                //             <Box className="specs">
+                //               <Typography>MOVE SPEED</Typography>
+                //               <Typography>{data?.movespeed}</Typography>
+                //             </Box>
+                //             <Loader
+                //               variant="determinate"
+                //               value={normalize(data?.movespeed)}
+                //             ></Loader>
+                //           </Box>
+
+                //         </Grid>
+                //         {/* <Grid item xs={12} sm={3} md={6}>
+                //         <p>{data?.description}</p>
+                //         </Grid> */}
+
+                //       </Grid>
+                //     </Container>
+                //   </CardContent>
+                // </Card>
+
+                <div style={{width:"60vh"}}>
+                  <div>
+                    <Card className="hero_container" sx={{display:"flex",flexDirection:"column",maxWidth:"700px"}}>
+                    <CardHeader 
+                      variant="h4"
+                        title={
+                          <Fragment>
+
+                         
+                          <Box sx={{display:"flex",color:"#FFB100"}}>
                             <Typography variant="h4"> {data?.name}</Typography>
                             {checkIsHeroPresent(data?.id) ? (
+                              <Tooltip TransitionComponent={Zoom} title="Remove from watchlist" placement="right-start">
                               <IconButton
                                 className="icon"
                                 onClick={() => handleRemoveRecord(data?.id)}
                               >
                                 <BookmarkRemoveOutlined />
                               </IconButton>
+                              </Tooltip>
                             ) : (
+                             <Tooltip TransitionComponent={Zoom} title="Add to watchlist" placement="right-start">
                               <IconButton
                                 className="icon"
                                 onClick={() => addHero(data)}
                               >
                                 <BookmarkAddOutlined />
                               </IconButton>
+                              </Tooltip>
+                             
                             )}
+                           
                           </Box>
-                          <Box>
-                            <Box className="specs">
-                              <Typography>HP</Typography>
-                              <Typography>{data?.hp}</Typography>
-                            </Box>
+                          <Divider />
+                          </Fragment>
+                        }
+                      />
+                      <Box sx={{display:"flex"}}>
 
-                            <Loader
-                              variant="determinate"
-                              value={normalize(data?.hp)}
-                            ></Loader>
-                          </Box>
-                          <Box>
-                            <Box className="specs">
-                              <Typography>ARMOR</Typography>
-                              <Typography>{data?.armor}</Typography>
-                            </Box>
-                            <Loader
-                              variant="determinate"
-                              value={normalize(data?.armor)}
-                            ></Loader>
-                          </Box>
-                          <Box>
-                            <Box className="specs">
-                              <Typography>ATTACK DAMAGE</Typography>
-                              <Typography>{data?.attackdamage}</Typography>
-                            </Box>
-                            <Loader
-                              variant="determinate"
-                              value={normalize(data?.attackdamage)}
-                            ></Loader>
-                          </Box>
-                          <Box>
-                            <Box className="specs">
-                              <Typography>ATTACK RANGE</Typography>
-                              <Typography>{data?.attackrange}</Typography>
-                            </Box>
+                     
+                      <CardContent>
+                      <img
+                            className="hero_full_image"
+                            alt={data?.name}
+                            src={  data?.big_image_url}
+                          style={{height:"100%"}}
+                          ></img>
+                      </CardContent>
+            
+             
+                
+                      <CardContent className="description">
+                        <Typography variant="span">{data?.description || "No info available"}</Typography>
+                     
+                      <Divider sx={{paddingTop:".5rem",paddingBottom:".5rem"}} />
+                     
+                        <Typography fontWeight="500" align="center">Stats</Typography>
+                       
 
-                            <Loader
-                              variant="determinate"
-                              value={normalize(data?.attackrange)}
-                            ></Loader>
+                       
+                        <Box className="specs_container">
+                          <Box className="specs">
+                            <Typography >HP</Typography>
+                            <Typography>{data?.hp}</Typography>
                           </Box>
-                          <Box>
-                            <Box className="specs">
-                              <Typography>MOVE SPEED</Typography>
-                              <Typography>{data?.movespeed}</Typography>
-                            </Box>
-                            <Loader
-                              variant="determinate"
-                              value={normalize(data?.movespeed)}
-                            ></Loader>
+
+                          <Loader
+                            variant="determinate"
+                            value={normalize(data?.hp)}
+                          ></Loader>
+                        </Box>
+                        <Box className="specs_container">
+                          <Box className="specs">
+                            <Typography>ARMOR</Typography>
+                            <Typography>{data?.armor}</Typography>
                           </Box>
-                         
-                        </Grid>
-                        <Grid item xs={12} sm={3} md={6}>
-                        <p>{data?.description}</p>
-                        </Grid>
-                        <Grid item xs={12} sm={3} md={6}>
-                          <div>
-                            <LocationCity color="primary" fontSize="large" />
-                            <Typography variant="h5" component="h3">
-                              Visit the Best Spots
-                            </Typography>
-                            <Typography>
-                              Check out some of the less known locations and
-                              attractions for tourists.
-                            </Typography>
-                          </div>
-                        </Grid>
-                      </Grid>
-                    </Container>
-                  </CardContent>
-                </Card>
+                          <Loader
+                            variant="determinate"
+                            value={normalize(data?.armor)}
+                          ></Loader>
+                        </Box>
+                        <Box className="specs_container">
+                          <Box className="specs">
+                            <Typography>ATTACK DAMAGE</Typography>
+                            <Typography>{data?.attackdamage}</Typography>
+                          </Box>
+                          <Loader
+                            variant="determinate"
+                            value={normalize(data?.attackdamage)}
+                          ></Loader>
+                        </Box>
+                        <Box className="specs_container">
+                          <Box className="specs">
+                            <Typography>ATTACK RANGE</Typography>
+                            <Typography>{data?.attackrange}</Typography>
+                          </Box>
+
+                          <Loader
+                            variant="determinate"
+                            value={normalize(data?.attackrange)}
+                          ></Loader>
+                        </Box>
+                        <Box className="specs_container">
+                          <Box className="specs">
+                            <Typography>MOVE SPEED</Typography>
+                            <Typography>{data?.movespeed}</Typography>
+                          </Box>
+                          <Loader
+                            variant="determinate"
+                            value={normalize(data?.movespeed)}
+                          ></Loader>
+                        </Box>
+                      
+                      </CardContent>
+                      </Box>
+                    </Card>
+                  </div>
+                </div>
               );
             })}
           </Box>

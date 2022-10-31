@@ -63,14 +63,14 @@ const TableContent = ({ headerCells, records }) => {
   return (
     <Box className="contaianers">
       <TableContainer className="table_container">
-        <Table>
+        <Table stickyHeader >
           <TableHeader
             headerCells={headerCells}
             valueToOrderBy={valueToOrderBy}
             orderDirection={orderDirection}
             handleRequestSort={handleRequestSort}
           />
-          <TableBody>
+          <TableBody sx={{background:"#2A2B2E"}}>
             {sortRowInformation(
               records,
               getComparator(orderDirection, valueToOrderBy)
@@ -90,7 +90,7 @@ const TableContent = ({ headerCells, records }) => {
                     <TableCell>{data?.attackrange}</TableCell>
                     <TableCell>{data?.hpregen}</TableCell>
                     <TableCell>{data?.spellblock}</TableCell>
-                    {data &&<TableCell><Button variant="contained" color="error" onClick={()=> handleRemoveRecord(data?.id)}>Remove</Button></TableCell>}
+                    {data &&<TableCell><Button className="removeButton" variant="contained" onClick={()=> handleRemoveRecord(data?.id)}>Remove</Button></TableCell>}
                   </TableRow>
                 );
               })}

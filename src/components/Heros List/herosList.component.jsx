@@ -5,7 +5,9 @@ import {
   CardContent,
   Container,
   IconButton,
+  Tooltip,
   Typography,
+  Zoom,
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { Fragment, useState } from "react";
@@ -38,6 +40,7 @@ const HerosList = ({ herosList }) => {
                   </Typography>
                 </CardContent>
                 <CardActions sx={{padding:"0"}}>
+                  <Tooltip TransitionComponent={Zoom} title="view player details" placement="right-start">
                   <IconButton
                     onClick={() => {
                       setSelectedHero(data?.name);
@@ -47,6 +50,7 @@ const HerosList = ({ herosList }) => {
                   >
                     <RemoveRedEye className="icon" sx={{color:"#F84982"}} />
                   </IconButton>
+                  </Tooltip>
                 </CardActions>
               </Card>
             );

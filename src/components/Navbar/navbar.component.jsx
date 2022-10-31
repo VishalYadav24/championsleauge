@@ -5,6 +5,8 @@ import {
   ListItem,
   Menu,
   Toolbar,
+  Tooltip,
+  Zoom,
 } from "@mui/material";
 import React, { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
@@ -27,6 +29,7 @@ const Navbar = () => {
               <h3>Game Store</h3>
             </ListItem>
             <ListItem className="list_item_2">
+              <Tooltip TransitionComponent={Zoom} title="Watchlist" placeholder="bottom">
               <IconButton onClick={()=> navigate("/favorite")} >
                 <img
                   alt="watch list"
@@ -34,6 +37,7 @@ const Navbar = () => {
                   src={require("../../assets/bookmark.png")}
                 ></img>
               </IconButton>
+              </Tooltip>
             </ListItem>
           </List>
         </Toolbar>
