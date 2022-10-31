@@ -9,17 +9,18 @@ import {
   Zoom,
 } from "@mui/material";
 import React, { Fragment } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./navbar.styles.scss";
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   return (
     <Fragment>
       <AppBar>
         <Toolbar>
           <List className="list_container">
             <ListItem className="list_item_1">
-              <IconButton>
+              <IconButton onClick={()=> { location?.pathname !=="/" && navigate("/")}}>
                 <img
                   className="logo"
                   alt="logo"
@@ -30,7 +31,7 @@ const Navbar = () => {
             </ListItem>
             <ListItem className="list_item_2">
               <Tooltip TransitionComponent={Zoom} title="Watchlist" placeholder="bottom">
-              <IconButton onClick={()=> navigate("/favorite")} >
+              <IconButton onClick={()=> { location?.pathname !=="/favorite" && navigate("/favorite")}} >
                 <img
                   alt="watch list"
                   className="logo"
