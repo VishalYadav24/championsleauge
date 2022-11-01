@@ -48,3 +48,8 @@
   line-height: 1rem;
 
 }
+.MuiSkeleton-root.heading{
+  background-color: $accent;
+  height:25rem;
+  width:60vh;
+}
