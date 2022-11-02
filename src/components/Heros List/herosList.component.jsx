@@ -25,7 +25,7 @@ const HerosList = ({ herosList }) => {
             flexWrap: "wrap",
           }}
         >
-          {herosList.map((data) => {
+          {herosList?.map((data) => {
             return (
               <Card
                 key={data?.id}

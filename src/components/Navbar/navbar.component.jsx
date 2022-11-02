@@ -20,7 +20,7 @@ const Navbar = () => {
         <Toolbar>
           <List className="list_container">
             <ListItem className="list_item_1">
-              <IconButton onClick={()=> { location?.pathname !=="/" && navigate("/")}}>
+              <IconButton className="home" onClick={()=> { location?.pathname !=="/" && navigate("/")}}>
                 <img
                   className="logo"
                   alt="logo"
@@ -31,7 +31,7 @@ const Navbar = () => {
             </ListItem>
             <ListItem className="list_item_2">
               <Tooltip TransitionComponent={Zoom} title="Watchlist" placeholder="bottom">
-              <IconButton onClick={()=> { location?.pathname !=="/favorite" && navigate("/favorite")}} >
+              <IconButton className="watchlist" onClick={()=> { location?.pathname !=="/favorite" && navigate("/favorite")}} >
                 <img
                   alt="watch list"
                   className="logo"
