@@ -12,6 +12,7 @@ const Loader = ({ variant, value, sx, size, thickness, color }) => {
         sx={sx}
         color={color}
         className="progress"
+        data-testid="loader"
       />
     </Fragment>
   );

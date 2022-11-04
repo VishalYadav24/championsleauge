@@ -22,7 +22,6 @@ export const getListOfChampions = async () => {
 };
 
 export const getChampion = async (championName) => {
-  console.log(championName)
   const additionalDataURL = "https://lolbe2.azurewebsites.net/api/v1/champstaticdata";
   const config = {
     params: {

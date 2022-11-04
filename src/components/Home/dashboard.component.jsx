@@ -19,13 +19,7 @@ const headerConstant = [
 const Dashboard = () => {
   const [herosList, setHerosList] = useState([]);
   const listOfChampions = useLoaderData();
-  const columnHeaders = headerConstant.map((data) => {
-    return {
-      key: data,
-      label: data.toUpperCase(),
-      disableSorting: data === "image_url" ? true : false,
-    };
-  });
+
   useState(() => {
     const minimalList = listOfChampions.map((data) => {
       return { id: data?.id, name: data?.name, image: data?.image_url };

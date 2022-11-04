@@ -103,11 +103,11 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
         <Fade in={open}>
           <Box className="box">
             {loading ? (
-              <Skeleton className="heading" />
+              <Skeleton data-testid="heading" className="heading" />
             ) : (
               heroDetails?.map((data) => {
                 return (
-                  <div style={{ width: "60vh" }}>
+                  <div key={data?.id} style={{ width: "60vh" }}>
                     <div>
                       <Card
                         className="hero_container"

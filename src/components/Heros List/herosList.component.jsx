@@ -46,7 +46,7 @@ const HerosList = ({ herosList }) => {
                       setSelectedHero(data?.name);
                       setOpen(true);
                     }}
-                    
+                    data-testid ="view player details"
                   >
                     <RemoveRedEye className="icon" sx={{color:"#F84982"}} />
                   </IconButton>

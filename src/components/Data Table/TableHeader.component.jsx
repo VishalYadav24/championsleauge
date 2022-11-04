@@ -25,6 +25,7 @@ const TableHeader = ({
                     valueToOrderBy === data?.key ? orderDirection : "asc"
                   }
                   onClick={createSortHandler(data?.key)}
+                  data-testid="table header"
                 >
                   {data?.label}
                 </TableSortLabel>

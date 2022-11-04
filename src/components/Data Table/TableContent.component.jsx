@@ -23,7 +23,6 @@ function descendingComparator(a, b, orderBy) {
 }
 
 function getComparator(order, orderBy) {
-  console.log(order, orderBy);
   return order === "desc"
     ? (a, b) => descendingComparator(a, b, orderBy)
     : (a, b) => -descendingComparator(a, b, orderBy);
@@ -90,7 +89,7 @@ const TableContent = ({ headerCells, records }) => {
                     <TableCell>{data?.attackrange}</TableCell>
                     <TableCell>{data?.hpregen}</TableCell>
                     <TableCell>{data?.spellblock}</TableCell>
-                    {data &&<TableCell><Button className="removeButton" variant="contained" onClick={()=> handleRemoveRecord(data?.id)}>Remove</Button></TableCell>}
+                    {data &&<TableCell><Button data-testid="removeButton" className="removeButton" variant="contained" onClick={()=> handleRemoveRecord(data?.id)}>Remove</Button></TableCell>}
                   </TableRow>
                 );
               })}
