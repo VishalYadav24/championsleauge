@@ -1,9 +1,11 @@
 import React from "react";
-import { useRouteError } from "react-router-dom";
+import { useLocation, useRouteError } from "react-router-dom";
 import "./notfound.styles.scss";
 
 const NotFound = () => {
   const error = useRouteError();
+  const location = useLocation();
+  console.log(error)
 
   return (
     <div className="not_found_banner">
@@ -15,7 +17,7 @@ const NotFound = () => {
       ></img>
       {error?.status === 404 ? <p> Please correct path </p> : null
       } 
-       {error?.message === "Network Error" ? <p> Please check your internet connection </p> : <p>{error?.message || error?.statusText}</p>
+       {error?.message === "Network Error" ? <p> Please check your internet connection </p> : <p> path  {location?.pathname} <span>{error?.message || error?.statusText} </span></p>
       } 
     </div>
   );
