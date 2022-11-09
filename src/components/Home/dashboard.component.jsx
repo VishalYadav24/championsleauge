@@ -27,7 +27,7 @@ const Dashboard = () => {
     setHerosList(minimalList);
   }, []);
   return (
-    <Box minHeight="100vh">
+    <Box>
       {/* <TableContent headerCells={columnHeaders} records={listOfChampions} /> */}
       <Navbar/>
       <HerosList herosList={herosList} />

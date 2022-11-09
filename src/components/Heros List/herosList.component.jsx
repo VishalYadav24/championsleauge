@@ -18,7 +18,7 @@ const HerosList = ({ herosList }) => {
   const [open, setOpen] = React.useState(false);
   return (
     <Fragment>
-      <Container>
+      <Container className="herosList">
         <Box
           sx={{
             display: { lg: "flex", md: "flex", sm: "flex", xs: "flex" },
@@ -58,6 +58,10 @@ const HerosList = ({ herosList }) => {
         </Box>
       </Container>
       <HeroDetails selectedHero={selectedHero} open={open} setOpen={setOpen} />
+      <Box className="footer"
+      >
+        <span>Made in 2022 by Vishal Yadav</span>
+      </Box>
     </Fragment>
   );
 };

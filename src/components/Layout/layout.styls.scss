@@ -3,10 +3,7 @@
 .MuiStack-root.layout{
     background-color: $primary;
 }
-.content_container{
-    height: calc(100vh - (13.063rem ));
-    overflow: auto;
-}
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -15,12 +12,13 @@
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: $primary;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #888;
+    border-radius: 10px;
   }
   
   /* Handle on hover */

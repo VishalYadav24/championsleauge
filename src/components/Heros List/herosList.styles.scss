@@ -1,5 +1,10 @@
 @import '../../styles/variables.styles.scss';
 
+.MuiContainer-root.herosList{
+  height: calc(100vh - 145px);
+  overflow: auto;
+}
+
 .MuiCard-root.hero_list{
   width:clamp(7rem,20vw,13rem);
   margin:0.5rem;
@@ -42,4 +47,16 @@
 }
 .MuiSvgIcon-root.icon{
   color: black;
+}
+
+
+.footer{
+  color: #E8E9EB;
+  background: $primary;
+  width: 100%;
+  min-height: 3rem;
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 1rem;
+
 }
