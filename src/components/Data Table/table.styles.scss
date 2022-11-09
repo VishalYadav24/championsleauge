@@ -2,12 +2,11 @@
 
 .MuiBox-root.contaianers {
   min-height: 100vh;
-  min-width: 100vw;
+ // min-width: 100vw;
 }
 
 .MuiTableContainer-root.table_container {
-  background-color: $neutral;
-  width: fit-content;
+  background-color: $secondary;
   margin: 0 auto;
   border-radius: 10px;
 }

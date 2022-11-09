@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import React, { useContext } from "react";
 import { HerosContext } from "../../context/heroscontext";
 import TableContent from "../Data Table/TableContent.component";
@@ -25,6 +26,19 @@ const WatchList = () => {
   });
   return <>
    <TableContent headerCells={columnHeaders} records={favoriteHero} />
+   <Box
+        className="footer"
+        sx={{
+          color: "#E8E9EB",
+          background: "#313628",
+          width: "100%",
+          minHeight: "3rem",
+          textAlign: "center",
+          paddingTop: "1rem",
+        }}
+      >
+        <span>Made in 2022 by Vishal Yadav</span>
+      </Box>
   </>;
 };
 

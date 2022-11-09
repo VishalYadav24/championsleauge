@@ -61,7 +61,7 @@ const TableContent = ({ headerCells, records }) => {
 
   return (
     <Box className="contaianers">
-      <TableContainer className="table_container">
+      <TableContainer className="table_container" sx={{width:{xs:"100%",sm:"100%",md:"100%",xl:"fit-content",lg:"fit-content"}}}>
         <Table stickyHeader >
           <TableHeader
             headerCells={headerCells}
