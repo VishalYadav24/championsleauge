@@ -5,8 +5,6 @@ import "./notfound.styles.scss";
 const NotFound = () => {
   const error = useRouteError();
   const location = useLocation();
-  console.log(error)
-
   return (
     <div className="not_found_banner">
       <p className="title">Page Not Found</p>
