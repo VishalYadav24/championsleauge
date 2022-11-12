@@ -4,6 +4,7 @@ import { HerosProvider } from "../../context/heroscontext";
 import HeroDetails from "../HeroDetails/heroDetails.component";
 import HerosList from "./herosList.component";
 import { getChampion } from "../../utils/api";
+import renderer from "react-test-renderer"
 describe("Heros List", () => {
   const herosList = [
     {
@@ -41,6 +42,14 @@ describe("Heros List", () => {
       expect(data).toEqual(heroDetails);
     });
   });
+
+  test("snapshot",()=>{
+    const heroDetails = renderer.create( <HerosProvider>
+      <HerosList herosList={herosList} />
+    </HerosProvider>).toJSON();
+    expect(heroDetails).toMatchSnapshot();
+  })
+
 });
 
 const heroDetails = [

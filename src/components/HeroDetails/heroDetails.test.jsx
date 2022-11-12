@@ -5,6 +5,7 @@ import { rest } from "msw";
 import { setupServer } from "msw/node";
 import { act } from "react-test-renderer";
 import userEvent from "@testing-library/user-event";
+import renderer from "react-test-renderer";
 describe("HeroDetails", () => {
   const server = setupServer(
     rest.get(
@@ -78,7 +79,17 @@ describe("HeroDetails", () => {
       expect(screen.getByTestId("add hero")).toBeInTheDocument()
     );
   });
+
+  
 });
+
+// test("snapshot", () => {
+//   const heroDetails = renderer.create( <HerosProvider>
+//     <HeroDetails selectedHero="Zilean" open={true} />
+//   </HerosProvider>).toJSON();
+
+//   expect(heroDetails).toMatchSnapshot();
+// })
 
 const heroDetailsObject = {
   armor: 24,

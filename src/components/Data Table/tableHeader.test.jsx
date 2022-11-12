@@ -8,6 +8,12 @@ describe("should display table header", () => {
     const tree = render(<TableHeader headerCells={columnHeaders} />);
     expect(screen.getAllByTestId("ArrowDownwardIcon")[0]).toBeInTheDocument();
   });
+  test("snapshot", () => {
+    const tableHeader = renderer.create(
+      <TableHeader headerCells={columnHeaders}/>
+    ).toJSON();
+    expect(tableHeader).toMatchSnapshot();
+  })
 });
 
 const headerCells = [

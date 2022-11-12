@@ -68,4 +68,10 @@ describe("Table Content", () => {
       expect(favoriteHero.length).toBe(0);
     });
   });
+  test("snapshot", () => {
+    const tableContent = renderer.create(<HerosProvider>
+      <TableContent headerCells={headerCells} records={favoriteHero} />
+    </HerosProvider>).toJSON();
+    expect(tableContent).toMatchSnapshot();
+  })
 });

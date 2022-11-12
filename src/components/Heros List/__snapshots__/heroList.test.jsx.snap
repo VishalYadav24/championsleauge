@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heros List snapshot 1`] = `
+Array [
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg herosList css-1oqqzyl-MuiContainer-root"
+  >
+    <div
+      className="MuiBox-root css-1177il5"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root hero_list css-bhp9pd-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        >
+          <img
+            alt="Zilean"
+            className="hero_image"
+            src="https://cdn.pandascore.co/images/lol/champion/image/0449c26e-f41d-4289-a2bc-32ddb8b3b911.png"
+          />
+        </div>
+        <div
+          className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+        >
+          <p
+            className="MuiTypography-root MuiTypography-body1 css-mvvmou-MuiTypography-root"
+          >
+            Zilean
+          </p>
+        </div>
+        <div
+          className="MuiCardActions-root MuiCardActions-spacing css-1ft2qpa-MuiCardActions-root"
+        >
+          <button
+            aria-label="view player details"
+            aria-labelledby={null}
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+            data-mui-internal-clone-element={true}
+            data-testid="view player details"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-joerfb-MuiSvgIcon-root"
+              data-testid="RemoveRedEyeIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+              />
+            </svg>
+            <span
+              className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="footer MuiBox-root css-0"
+  >
+    <span>
+      Made in 2022 by Vishal Yadav
+    </span>
+  </div>,
+]
+`;
