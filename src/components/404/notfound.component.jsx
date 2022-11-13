@@ -3,7 +3,9 @@ import { useLocation, useRouteError } from "react-router-dom";
 import "./notfound.styles.scss";
 
 const NotFound = () => {
+ /** fetch Error Response keys {data ,status,statusText}  occurred while navigation  */
   const error = useRouteError();
+  /** fetch router location object keys {pathname, search}  */
   const location = useLocation();
   return (
     <div className="not_found_banner">

@@ -3,6 +3,10 @@ import axios from "axios";
 const API_KEY = "eNraJAvEMOVX0M_d7IfaecVTtJK_QiAXA-_qUL8WJckQX44PZ1U";
 const baseUrl = "https://api.pandascore.co/lol/champions";
 
+/**
+ * @async function
+ * @returns {Array.<Object>} list of heros
+ */
 export const getListOfChampions = async () => {
   const pageNumber = 1;
   const pageSize = 50;
@@ -20,7 +24,10 @@ export const getListOfChampions = async () => {
     throw error;
   }
 };
-
+/**
+ * @async function
+ * @param {string} heroName used to fetch hero details
+ */
 export const getChampion = async (championName) => {
   const additionalDataURL = "https://lolbe2.azurewebsites.net/api/v1/champstaticdata";
   const config = {

@@ -2,7 +2,10 @@ import { Box } from "@mui/material";
 import React, { useContext } from "react";
 import { HerosContext } from "../../context/heroscontext";
 import TableContent from "../Data Table/TableContent.component";
-
+/**
+ * Display heroDetails from users watchlist
+ * 
+ */
 const WatchList = () => {
   const {favoriteHero} = useContext(HerosContext);
   const headerConstant = [

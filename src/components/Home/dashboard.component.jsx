@@ -5,17 +5,9 @@ import TableContent from "../Data Table/TableContent.component";
 import HerosList from "../Heros List/herosList.component";
 import Navbar from "../Navbar/navbar.component";
 
-const headerConstant = [
-  "id",
-  "image_url",
-  "name",
-  "hp",
-  "armor",
-  "attackdamage",
-  "attackrange",
-  "hpregen",
-  "spellblock",
-];
+/**
+ * Container component for application components
+ */
 const Dashboard = () => {
   const [herosList, setHerosList] = useState([]);
   const listOfChampions = useLoaderData();
@@ -28,7 +20,6 @@ const Dashboard = () => {
   }, []);
   return (
     <Box>
-      {/* <TableContent headerCells={columnHeaders} records={listOfChampions} /> */}
       <Navbar/>
       <HerosList herosList={herosList} />
     </Box>

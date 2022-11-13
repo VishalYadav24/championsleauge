@@ -31,7 +31,12 @@ import { HerosContext } from "../../context/heroscontext";
 import { getChampion } from "../../utils/api";
 import Loader from "../Loader/loader.component";
 import "./heroDetails.styles.scss";
-
+/**
+ * Displays details on individual hero selected by the user
+ * @param {string} selectedHero - name of the selected hero 
+ * @param {boolean} open - to open modal
+ *  
+ */
 const HeroDetails = ({ selectedHero, open, setOpen }) => {
   const [heroDetails, setHeroDetails] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -46,8 +51,8 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
 
   /**
    * Method for conversion of custom values (numbers) to scale of 0 to 100 for progress bar/circle.
-   * @param {*} value - number
-   * @returns
+   * @param {number} value - number
+   * @returns {number}
    */
   const normalize = (value) => {
     let max = 0;
@@ -103,7 +108,13 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
         <Fade in={open}>
           <Box className="box">
             {loading ? (
-              <Skeleton data-testid="heading" className="heading" />
+              <Box>
+                <Typography variant="h5" textAlign="center" sx={{color:"#fff"}}>Loading... </Typography>
+                <Skeleton data-testid="heading" className="heading">
+              
+              </Skeleton>
+              </Box>
+            
             ) : (
               heroDetails?.map((data) => {
                 return (

@@ -13,9 +13,14 @@ import { Box } from "@mui/system";
 import React, { Fragment, useState } from "react";
 import HeroDetails from "../HeroDetails/heroDetails.component";
 import "./herosList.styles.scss";
+/**
+ * Displays a list of Heros to user.
+ * @param {Array.<Object>} heroList - list of hero records. 
+ * 
+ */
 const HerosList = ({ herosList }) => {
   const [selectedHero, setSelectedHero] = useState("");
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <Fragment>
       <Container className="herosList">
