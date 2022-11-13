@@ -1,5 +1,8 @@
-import { BookmarkAdd, BookmarkAddOutlined, RemoveRedEye } from "@mui/icons-material";
 import {
+  RemoveRedEye,
+} from "@mui/icons-material";
+import {
+  Badge,
   Card,
   CardActions,
   CardContent,
@@ -15,8 +18,8 @@ import HeroDetails from "../HeroDetails/heroDetails.component";
 import "./herosList.styles.scss";
 /**
  * Displays a list of Heros to user.
- * @param {Array.<Object>} heroList - list of hero records. 
- * 
+ * @param {Array.<Object>} heroList - list of hero records.
+ *
  */
 const HerosList = ({ herosList }) => {
   const [selectedHero, setSelectedHero] = useState("");
@@ -32,29 +35,78 @@ const HerosList = ({ herosList }) => {
         >
           {herosList?.map((data) => {
             return (
-              <Card
-                key={data?.id}
-                className="hero_list"
-              >
-                <CardContent>
-                  <img className="hero_image" alt={data?.name} src={data?.image}></img>
+              <Card key={data?.id} className="hero_list">
+                <CardActions  className="card_actions">
+                  <Tooltip
+                    TransitionComponent={Zoom}
+                    title={data?.armor}
+                    placement="bottom"
+                  >
+                    <IconButton>
+                      <img
+                        alt="armor"
+                        className="logo"
+                        src={require("../../assets/armor.png")}
+                      ></img>
+                    </IconButton>
+                  </Tooltip>
+                  <Tooltip
+                    TransitionComponent={Zoom}
+                    title={data?.attackDamage}
+                    placement="bottom"
+                  >
+                    <IconButton>
+                      <img
+                        alt="damage"
+                        className="logo"
+                        src={require("../../assets/bandage.png")}
+                      ></img>
+                    </IconButton>
+                  </Tooltip>
+                </CardActions>
+                <CardContent className="hero_image">
+                  <img
+                    className="hero_image"
+                    alt={data?.name}
+                    src={data?.image}
+                  ></img>
                 </CardContent>
-                <CardContent>
+                <CardContent className="hero_name">
                   <Typography sx={{ fontSize: "1rem", fontWeight: "bold" }}>
                     {data?.name}
                   </Typography>
                 </CardContent>
-                <CardActions sx={{padding:"0"}}>
-                  <Tooltip TransitionComponent={Zoom} title="view player details" placement="right-start">
-                  <IconButton
-                    onClick={() => {
-                      setSelectedHero(data?.name);
-                      setOpen(true);
-                    }}
-                    data-testid ="view player details"
+                <CardActions className="card_actions">
+                  <Tooltip
+                    TransitionComponent={Zoom}
+                    title="view player details"
+                    placement="right-start"
                   >
-                    <RemoveRedEye className="icon" sx={{color:"#F84982"}} />
-                  </IconButton>
+                    <IconButton
+                      onClick={() => {
+                        setSelectedHero(data?.name);
+                        setOpen(true);
+                      }}
+                      data-testid="view player details"
+                    >
+                      <RemoveRedEye
+                        className="icon"
+                        sx={{ color: "#F84982" }}
+                      />
+                    </IconButton>
+                  </Tooltip>
+                  <Tooltip
+                    TransitionComponent={Zoom}
+                    title={data?.hp}
+                    placement="top"
+                  >
+                    <IconButton>
+                      <img
+                        alt="health"
+                        className="logo"
+                        src={require("../../assets/heart.png")}
+                      ></img>
+                    </IconButton>
                   </Tooltip>
                 </CardActions>
               </Card>
@@ -63,8 +115,7 @@ const HerosList = ({ herosList }) => {
         </Box>
       </Container>
       <HeroDetails selectedHero={selectedHero} open={open} setOpen={setOpen} />
-      <Box className="footer"
-      >
+      <Box className="footer">
         <span>Made in 2022 by Vishal Yadav</span>
       </Box>
     </Fragment>

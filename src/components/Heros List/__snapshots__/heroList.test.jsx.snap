@@ -12,7 +12,73 @@ Array [
         className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root hero_list css-bhp9pd-MuiPaper-root-MuiCard-root"
       >
         <div
-          className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          className="MuiCardActions-root MuiCardActions-spacing card_actions css-1t6e9jv-MuiCardActions-root"
+        >
+          <button
+            aria-label={null}
+            aria-labelledby={null}
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+            data-mui-internal-clone-element={true}
+            disabled={false}
+            onBlur={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <img
+              alt="armor"
+              className="logo"
+              src="armor.png"
+            />
+            <span
+              className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+          <button
+            aria-label={null}
+            aria-labelledby={null}
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+            data-mui-internal-clone-element={true}
+            disabled={false}
+            onBlur={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <img
+              alt="damage"
+              className="logo"
+              src="bandage.png"
+            />
+            <span
+              className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          className="MuiCardContent-root hero_image css-46bh2p-MuiCardContent-root"
         >
           <img
             alt="Zilean"
@@ -21,7 +87,7 @@ Array [
           />
         </div>
         <div
-          className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          className="MuiCardContent-root hero_name css-46bh2p-MuiCardContent-root"
         >
           <p
             className="MuiTypography-root MuiTypography-body1 css-mvvmou-MuiTypography-root"
@@ -30,7 +96,7 @@ Array [
           </p>
         </div>
         <div
-          className="MuiCardActions-root MuiCardActions-spacing css-1ft2qpa-MuiCardActions-root"
+          className="MuiCardActions-root MuiCardActions-spacing card_actions css-1t6e9jv-MuiCardActions-root"
         >
           <button
             aria-label="view player details"
@@ -67,6 +133,37 @@ Array [
                 d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
               />
             </svg>
+            <span
+              className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+          <button
+            aria-label={null}
+            aria-labelledby={null}
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+            data-mui-internal-clone-element={true}
+            disabled={false}
+            onBlur={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <img
+              alt="health"
+              className="logo"
+              src="heart.png"
+            />
             <span
               className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />

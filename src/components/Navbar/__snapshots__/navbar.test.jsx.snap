@@ -15,7 +15,10 @@ exports[`<Navbar/> snapshot 1`] = `
         disabled={false}
       >
         <button
+          aria-label="Home"
+          aria-labelledby={null}
           className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium home css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+          data-mui-internal-clone-element={true}
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -26,10 +29,12 @@ exports[`<Navbar/> snapshot 1`] = `
           onKeyUp={[Function]}
           onMouseDown={[Function]}
           onMouseLeave={[Function]}
+          onMouseOver={[Function]}
           onMouseUp={[Function]}
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          placeholder="bottom"
           tabIndex={0}
           type="button"
         >

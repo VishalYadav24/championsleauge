@@ -14,7 +14,7 @@ const Dashboard = () => {
 
   useState(() => {
     const minimalList = listOfChampions.map((data) => {
-      return { id: data?.id, name: data?.name, image: data?.image_url };
+      return { id: data?.id, name: data?.name, image: data?.image_url,hp:data?.hp,armor: data?.armor,attackDamage: data?.attackdamage};
     });
     setHerosList(minimalList);
   }, []);

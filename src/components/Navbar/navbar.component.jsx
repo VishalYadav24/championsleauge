@@ -25,6 +25,7 @@ const Navbar = () => {
         <Toolbar>
           <List className="list_container">
             <ListItem className="list_item_1">
+            <Tooltip TransitionComponent={Zoom} title="Home" placeholder="bottom">
               <IconButton className="home" onClick={()=> { location?.pathname !=="/" && navigate("/")}}>
                 <img
                   className="logo"
@@ -32,6 +33,7 @@ const Navbar = () => {
                   src={require("../../assets/swords.png")}
                 ></img>
               </IconButton>
+              </Tooltip>
               <h3>Game Store</h3>
             </ListItem>
             <ListItem className="list_item_2">

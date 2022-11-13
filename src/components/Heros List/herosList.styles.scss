@@ -17,6 +17,12 @@
   color: $neutral;
 }
 
+.hero_image.MuiCardContent-root {
+  padding: 8px;
+}
+.hero_name.MuiCardContent-root {
+  padding: 0px;
+}
 
 .MuiCardContent-root img.hero_image {
   border-radius: 50%;
@@ -48,7 +54,10 @@
 .MuiSvgIcon-root.icon{
   color: black;
 }
-
+.card_actions.MuiCardActions-root{
+padding: 0;
+justify-content: space-between;
+}
 
 .footer{
   color: #E8E9EB;

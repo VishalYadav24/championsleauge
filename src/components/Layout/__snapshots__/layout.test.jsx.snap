@@ -19,7 +19,10 @@ exports[`Render Basic Layout of application <Layout/>Snapshot 1`] = `
           disabled={false}
         >
           <button
+            aria-label="Home"
+            aria-labelledby={null}
             className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium home css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+            data-mui-internal-clone-element={true}
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -30,10 +33,12 @@ exports[`Render Basic Layout of application <Layout/>Snapshot 1`] = `
             onKeyUp={[Function]}
             onMouseDown={[Function]}
             onMouseLeave={[Function]}
+            onMouseOver={[Function]}
             onMouseUp={[Function]}
             onTouchEnd={[Function]}
             onTouchMove={[Function]}
             onTouchStart={[Function]}
+            placeholder="bottom"
             tabIndex={0}
             type="button"
           >
@@ -78,11 +83,18 @@ exports[`Render Basic Layout of application <Layout/>Snapshot 1`] = `
             tabIndex={0}
             type="button"
           >
-            <img
-              alt="watch list"
-              className="logo"
-              src="bookmark.png"
-            />
+            <span
+              className="MuiBadge-root badge BaseBadge-root css-1c32n2y-MuiBadge-root"
+            >
+              <img
+                alt="watch list"
+                className="logo"
+                src="bookmark.png"
+              />
+              <span
+                className="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorPrimary BaseBadge-badge BaseBadge-invisible css-1pi4uwz-MuiBadge-badge"
+              />
+            </span>
             <span
               className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
