@@ -22,3 +22,7 @@
 .logo {
   width: clamp(1.2rem, 2.5vw, 1.8rem);
 }
+.badge .MuiBadge-badge{
+  background-color: $accent;
+  color: $black;
+}

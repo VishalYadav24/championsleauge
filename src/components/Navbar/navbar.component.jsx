@@ -1,5 +1,6 @@
 import {
   AppBar,
+  Badge,
   IconButton,
   List,
   ListItem,
@@ -8,12 +9,16 @@ import {
   Tooltip,
   Zoom,
 } from "@mui/material";
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { HerosContext } from "../../context/heroscontext";
 import "./navbar.styles.scss";
 const Navbar = () => {
+    /** to navigate between routes  */
   const navigate = useNavigate();
+    /** fetch router location object keys {pathname, search}  */
   const location = useLocation();
+  const {favoriteHero} = useContext(HerosContext);
   return (
     <Fragment>
       <AppBar>
@@ -32,11 +37,14 @@ const Navbar = () => {
             <ListItem className="list_item_2">
               <Tooltip TransitionComponent={Zoom} title="Watchlist" placeholder="bottom">
               <IconButton className="watchlist" onClick={()=> { location?.pathname !=="/favorite" && navigate("/favorite")}} >
+                <Badge className="badge" badgeContent={favoriteHero?.length} color="primary">
+
                 <img
                   alt="watch list"
                   className="logo"
                   src={require("../../assets/bookmark.png")}
-                ></img>
+                  ></img>
+                  </Badge>
               </IconButton>
               </Tooltip>
             </ListItem>

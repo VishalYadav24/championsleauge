@@ -74,11 +74,18 @@ exports[`<Navbar/> snapshot 1`] = `
           tabIndex={0}
           type="button"
         >
-          <img
-            alt="watch list"
-            className="logo"
-            src="bookmark.png"
-          />
+          <span
+            className="MuiBadge-root badge BaseBadge-root css-1c32n2y-MuiBadge-root"
+          >
+            <img
+              alt="watch list"
+              className="logo"
+              src="bookmark.png"
+            />
+            <span
+              className="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorPrimary BaseBadge-badge BaseBadge-invisible css-1pi4uwz-MuiBadge-badge"
+            />
+          </span>
           <span
             className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
           />
