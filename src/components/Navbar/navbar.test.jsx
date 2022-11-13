@@ -19,25 +19,13 @@ describe("<Navbar/>", () => {
     expect(navbar).toMatchSnapshot();
   });
   test("should render the navigation bar and display app name", () => {
-    const navbar = render(
-      <BrowserRouter>
-        <HerosProvider>
-          <Navbar />
-        </HerosProvider>
-      </BrowserRouter>
-    );
+    const navbar = renderNavbar();
     const title = navbar.getAllByText("Game Store");
     const titleText = within(title[0]).getByText("Game Store");
     expect(titleText).toHaveTextContent("Game Store");
   });
   test("should render the navigation bar and test home button", () => {
-    const navbar = render(
-      <BrowserRouter>
-        <HerosProvider>
-          <Navbar />
-        </HerosProvider>
-      </BrowserRouter>
-    );
+    const navbar = renderNavbar();
     const homeIcon = screen.queryAllByRole("button")[0];
     act(() => {
       fireEvent.click(homeIcon);
@@ -51,13 +39,7 @@ describe("<Navbar/>", () => {
     });
   });
   test("should render the navigation bar and test watchlist button", () => {
-    const navbar = render(
-      <BrowserRouter>
-        <HerosProvider>
-          <Navbar />
-        </HerosProvider>
-      </BrowserRouter>
-    );
+    const navbar = renderNavbar();
     const watchlistIcon = screen.queryAllByRole("button")[1];
     act(() => {
       fireEvent.click(watchlistIcon);
@@ -71,3 +53,15 @@ describe("<Navbar/>", () => {
     });
   });
 });
+
+const renderNavbar = () => {
+  return (
+    render(
+      <BrowserRouter>
+        <HerosProvider>
+          <Navbar />
+        </HerosProvider>
+      </BrowserRouter>
+    )
+  )
+}
