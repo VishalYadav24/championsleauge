@@ -17,33 +17,40 @@ describe("Table Content", () => {
   ];
   let favoriteHero = [
     {
-      armor: 33,
-      armorperlevel: 4.4,
-      attackdamage: 65,
+      armor: 24,
+      armorperlevel: 5,
+      attackdamage: 52,
       attackdamageperlevel: 3,
-      attackrange: 125,
+      attackrange: 550,
       attackspeedoffset: null,
-      attackspeedperlevel: 2.3,
+      attackspeedperlevel: 2.13,
       big_image_url:
-        "https://cdn.pandascore.co/images/lol/champion/big_image/23fafc3c-7792-48b5-a6f3-886752261a83.jpg",
+        "https://cdn.pandascore.co/images/lol/champion/big_image/8842e560-c719-4423-86a1-a47b042ce627.jpg",
       crit: 0,
       critperlevel: 0,
-      hp: 620,
-      hpperlevel: 99,
-      hpregen: 4,
-      hpregenperlevel: 0.75,
-      id: 3236,
+      hp: 574,
+      hpperlevel: 96,
+      hpregen: 5.5,
+      hpregenperlevel: 0.5,
+      id: 3238,
       image_url:
-        "https://cdn.pandascore.co/images/lol/champion/image/eef5aa86-9eda-411a-a170-cc6e11e5c1a3.png",
+        "https://cdn.pandascore.co/images/lol/champion/image/0449c26e-f41d-4289-a2bc-32ddb8b3b911.png",
       movespeed: 335,
-      mp: 280,
-      mpperlevel: 35,
-      mpregen: 7.45,
-      mpregenperlevel: 0.6,
-      name: "Warwick",
-      spellblock: 32,
-      spellblockperlevel: 2.05,
+      mp: 452,
+      mpperlevel: 50,
+      mpregen: 11.35,
+      mpregenperlevel: 0.8,
+      name: "Zilean",
+      spellblock: 30,
+      spellblockperlevel: 1.3,
       videogame_versions: ["12.21.1"],
+      description:
+        "Zilean was once a powerful Icathian mage who has since become obsessed with time. After the destruction of his homeland he studied the passage of time, using magic to become immortal. Now he drifts through the past, present and future, trying to find a moment where he can turn back the destruction of Icathia.",
+      image: {
+        banner:
+          "https://lolstorage02.blob.core.windows.net/lolstatic/dragontail-12.21.1/img/champion/splash/Zilean_0.jpg",
+        tile: "https://lolstorage02.blob.core.windows.net/lolstatic/dragontail-12.21.1/img/champion/tiles/Zilean_0.jpg",
+      },
     },
   ];
   test("display table content", () => {
@@ -52,9 +59,10 @@ describe("Table Content", () => {
         <TableContent headerCells={headerCells} records={favoriteHero} />
       </HerosProvider>
     );
-    const heroNameElement = screen.getAllByText("Warwick");
-    const heroNameText = within(heroNameElement[0]).getAllByText("Warwick");
-    expect(heroNameText[0].innerHTML).toBe("Warwick");
+    screen.debug();
+    const heroNameElement = screen.getAllByText("Zilean");
+    const heroNameText = within(heroNameElement[0]).getAllByText("Zilean");
+    expect(heroNameText[0].innerHTML).toBe("Zilean");
   });
   test("remove  record on remove button click", () => {
     const tree = render(
