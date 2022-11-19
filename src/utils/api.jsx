@@ -7,9 +7,9 @@ const baseUrl = "https://api.pandascore.co/lol/champions";
  * @async function
  * @returns {Array.<Object>} list of heros
  */
-export const getListOfChampions = async () => {
+export const getListOfChampions = async (herosCount) => {
   const pageNumber = 1;
-  const pageSize = 50;
+  const pageSize = (herosCount || 50);
   const config = {
     params: {
       "page[number]": pageNumber,
