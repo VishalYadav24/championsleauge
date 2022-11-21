@@ -40,6 +40,7 @@
   transition: transform .4s ease;
   .MuiCardContent-root img.hero_image {
     border: 5px double $accent;
+    animation: image 1s ease 0s 1 normal forwards;
   
   }
   .MuiCardContent-root {
@@ -68,4 +69,110 @@ justify-content: space-between;
   padding-top: 1rem;
   margin-top: 1rem;
 
+}
+
+// Animations
+.damage:hover{
+   animation: attack 1s ease 0s 1 normal forwards;
+}
+.health:hover{
+  animation: heartbeat 2s ease 0s 1 normal forwards;
+}
+.eye_icon:hover{
+  animation: eye 1s ease 0s 1 normal forwards;
+}
+.armor:hover{
+  animation: armor_animation 2s ease 0s 1 normal forwards;
+}
+@keyframes attack {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+@keyframes heartbeat {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+    background-color: orange;
+    border-radius: 15px;
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+};
+
+@keyframes eye {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes image {
+	0% {
+		box-shadow: 0 0 0 0 $accent;
+	}
+
+	100% {
+		box-shadow: 0 0 30px 0px $accent;
+	}
+}
+
+@keyframes armor_animation {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 50%;
+	}
+
+	10% {
+		transform: rotate(8deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(-10deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(10deg);
+	}
+
+	80% {
+		transform: rotate(-8deg);
+	}
+
+	90% {
+		transform: rotate(8deg);
+	}
 }

@@ -45,7 +45,7 @@ const HerosList = ({ herosList }) => {
                     <IconButton>
                       <img
                         alt="armor"
-                        className="logo"
+                        className="logo armor"
                         src={require("../../assets/armor.png")}
                       ></img>
                     </IconButton>
@@ -58,7 +58,7 @@ const HerosList = ({ herosList }) => {
                     <IconButton>
                       <img
                         alt="damage"
-                        className="logo"
+                        className="logo damage"
                         src={require("../../assets/bandage.png")}
                       ></img>
                     </IconButton>
@@ -88,6 +88,7 @@ const HerosList = ({ herosList }) => {
                         setOpen(true);
                       }}
                       data-testid="view player details"
+                      className="eye_icon"
                     >
                       <RemoveRedEye
                         className="icon"
@@ -103,7 +104,7 @@ const HerosList = ({ herosList }) => {
                     <IconButton>
                       <img
                         alt="health"
-                        className="logo"
+                        className="logo health"
                         src={require("../../assets/heart.png")}
                       ></img>
                     </IconButton>

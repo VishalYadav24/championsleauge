@@ -38,7 +38,7 @@ Array [
           >
             <img
               alt="armor"
-              className="logo"
+              className="logo armor"
               src="armor.png"
             />
             <span
@@ -69,7 +69,7 @@ Array [
           >
             <img
               alt="damage"
-              className="logo"
+              className="logo damage"
               src="bandage.png"
             />
             <span
@@ -101,7 +101,7 @@ Array [
           <button
             aria-label="view player details"
             aria-labelledby={null}
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium eye_icon css-78trlr-MuiButtonBase-root-MuiIconButton-root"
             data-mui-internal-clone-element={true}
             data-testid="view player details"
             disabled={false}
@@ -161,7 +161,7 @@ Array [
           >
             <img
               alt="health"
-              className="logo"
+              className="logo health"
               src="heart.png"
             />
             <span
