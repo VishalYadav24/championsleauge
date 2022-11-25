@@ -148,7 +148,7 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                                       onClick={() =>
                                         handleRemoveRecord(data?.id)
                                       }
-                                      data-testid = "remove hero"
+                                      data-testid="remove hero"
                                     >
                                       <BookmarkRemoveOutlined />
                                     </IconButton>
@@ -162,14 +162,32 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                                     <IconButton
                                       className="icon"
                                       onClick={() => addHero(data)}
-                                      data-testid = "add hero"
+                                      data-testid="add hero"
                                     >
                                       <BookmarkAddOutlined />
                                     </IconButton>
                                   </Tooltip>
                                 )}
+         <Box padding=".5rem">
+                                  {data?.class?.map((heroClass) => {
+                                    return (
+                                      <Tooltip
+                                        TransitionComponent={Zoom}
+                                        title={heroClass?.description}
+                                        placement="top"
+                                      >
+                                        <img
+                                          style={{ width: "35px" }}
+                                          alt={heroClass?.description}
+                                          src={heroClass?.image}
+                                        />
+                                      </Tooltip>
+                                    );
+                                  })}
+                                </Box>
                               </Box>
                               <Divider />
+                             
                             </Fragment>
                           }
                         />

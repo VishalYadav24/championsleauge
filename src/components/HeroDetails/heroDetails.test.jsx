@@ -45,11 +45,10 @@ describe("HeroDetails", () => {
 
   test("display herodetails", async () => {
     const herodetails = renderScreen();
-
     await waitFor(() => expect(screen.getByText("Zilean")).toBeInTheDocument());
   });
   test(" add new hero to watchlist", async () => {
-  const herodetails = renderScreen();
+    const herodetails = renderScreen();
     await waitFor(() => expect(screen.getByText("Zilean")).toBeInTheDocument());
     const addHero = screen.getByTestId("add hero");
     act(() => {
@@ -79,8 +78,6 @@ describe("HeroDetails", () => {
       expect(screen.getByTestId("add hero")).toBeInTheDocument()
     );
   });
-
-  
 });
 
 // test("snapshot", () => {
@@ -119,14 +116,24 @@ const heroDetailsObject = {
   spellblock: 30,
   spellblockperlevel: 1.3,
   videogame_versions: ["12.21.1"],
+  class: [
+    {
+      description: "Marksman",
+      image:
+        "https://lolstorage02.blob.core.windows.net/lolstatic/assets/roles/Marksman.png",
+    },
+    {
+      description: "Assassin",
+      image:
+        "https://lolstorage02.blob.core.windows.net/lolstatic/assets/roles/Assassin.png",
+    },
+  ],
 };
 
-const renderScreen = ()=>{
-  return(
-    render(
-      <HerosProvider>
-        <HeroDetails selectedHero="Zilean" open={true} />
-      </HerosProvider>
-    )
-  )
+const renderScreen = () => {
+  return render(
+    <HerosProvider>
+      <HeroDetails selectedHero="Zilean" open={true} />
+    </HerosProvider>
+  );
 };
