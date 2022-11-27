@@ -1,6 +1,7 @@
 import {
   BookmarkAddOutlined,
   BookmarkRemoveOutlined,
+  Close,
   EmojiPeople,
   Fastfood,
   LocationCity,
@@ -33,9 +34,9 @@ import Loader from "../Loader/loader.component";
 import "./heroDetails.styles.scss";
 /**
  * Displays details on individual hero selected by the user
- * @param {string} selectedHero - name of the selected hero 
+ * @param {string} selectedHero - name of the selected hero
  * @param {boolean} open - to open modal
- *  
+ *
  */
 const HeroDetails = ({ selectedHero, open, setOpen }) => {
   const [heroDetails, setHeroDetails] = useState(null);
@@ -109,12 +110,15 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
           <Box className="box">
             {loading ? (
               <Box>
-                <Typography variant="h5" textAlign="center" sx={{color:"#fff"}}>Loading... </Typography>
-                <Skeleton data-testid="heading" className="heading">
-              
-              </Skeleton>
+                <Typography
+                  variant="h5"
+                  textAlign="center"
+                  sx={{ color: "#fff" }}
+                >
+                  Loading...{" "}
+                </Typography>
+                <Skeleton data-testid="heading" className="heading"></Skeleton>
               </Box>
-            
             ) : (
               heroDetails?.map((data) => {
                 return (
@@ -168,7 +172,7 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                                     </IconButton>
                                   </Tooltip>
                                 )}
-         <Box padding=".5rem">
+                                <Box >
                                   {data?.class?.map((heroClass) => {
                                     return (
                                       <Tooltip
@@ -185,9 +189,15 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                                     );
                                   })}
                                 </Box>
+                                <Tooltip
+                                  TransitionComponent={Zoom}
+                                  title="Close"
+                                  placement="top"
+                                >
+                                    <Close sx={{color:"##FFB100",position:"absolute",right:"1rem",top:".5rem"}} onClick={handleClose}/>
+                                </Tooltip>
                               </Box>
                               <Divider />
-                             
                             </Fragment>
                           }
                         />
