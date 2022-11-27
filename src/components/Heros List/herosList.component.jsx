@@ -21,7 +21,7 @@ import "./herosList.styles.scss";
  * @param {Array.<Object>} heroList - list of hero records.
  *
  */
-const HerosList = ({ herosList }) => {
+const HerosList = ({ herosList,orderBy }) => {
   const [selectedHero, setSelectedHero] = useState("");
   const [open, setOpen] = useState(false);
   return (
@@ -39,7 +39,7 @@ const HerosList = ({ herosList }) => {
                 <CardActions  className="card_actions">
                   <Tooltip
                     TransitionComponent={Zoom}
-                    title={data?.armor}
+                    title={`Armor ${data?.armor}`}
                     placement="bottom"
                   >
                     <IconButton>
@@ -52,7 +52,7 @@ const HerosList = ({ herosList }) => {
                   </Tooltip>
                   <Tooltip
                     TransitionComponent={Zoom}
-                    title={data?.attackDamage}
+                    title={`Damage ${data?.attackDamage}`}
                     placement="bottom"
                   >
                     <IconButton>
@@ -75,6 +75,7 @@ const HerosList = ({ herosList }) => {
                   <Typography sx={{ fontSize: "1rem", fontWeight: "bold" }}>
                     {data?.name}
                   </Typography>
+                  <span style={{fontSize:".8rem"}}> {`${orderBy.toLowerCase()} ${data[orderBy]}`}</span>
                 </CardContent>
                 <CardActions className="card_actions">
                   <Tooltip
@@ -98,7 +99,7 @@ const HerosList = ({ herosList }) => {
                   </Tooltip>
                   <Tooltip
                     TransitionComponent={Zoom}
-                    title={data?.hp}
+                    title={`Hp ${data?.hp}`}
                     placement="top"
                   >
                     <IconButton>

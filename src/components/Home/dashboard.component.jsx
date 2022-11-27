@@ -93,6 +93,7 @@ const Dashboard = () => {
         herosList={herosList}
         setHerosList={setHerosList}
         createLimitedStatsList={createLimitedStatsList}
+        orderBy={orderBy}
       />
     </Box>
   );
