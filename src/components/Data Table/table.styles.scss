@@ -26,6 +26,18 @@
 .MuiTableCell-root.MuiTableCell-body {
   color: $neutral;
 }
+.MuiButtonBase-root.MuiTableSortLabel-root:hover,.MuiTableCell-root.MuiTableCell-head:hover{
+color:$neutral;
+.MuiSvgIcon-root{
+color: $neutral;
+}
+}
+.MuiButtonBase-root.MuiTableSortLabel-root.Mui-active{
+  color: $accent;
+  .MuiSvgIcon-root{
+    color: $neutral;
+    }
+}
 .removeButton.MuiButtonBase-root {
   background: #ffb100;
   color: #050505;
