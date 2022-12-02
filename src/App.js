@@ -14,14 +14,7 @@ import { HerosProvider } from "./context/heroscontext";
 import theme from "./theme/theme";
 import { getListOfChampions } from "./utils/api";
 import './App.scss'
-// const router = createBrowserRouter(
-//   createRoutesFromElements(
-//     <Route path="/" element={<Layout />} errorElement={<NotFound />}>
-//       <Route index element={<Dashboard />} loader={getListOfChampions}></Route>
-//       <Route path="favorites" element={<WatchList />}></Route>
-//     </Route>
-//   )
-// );
+
 
 function App() {
   const router = createBrowserRouter(

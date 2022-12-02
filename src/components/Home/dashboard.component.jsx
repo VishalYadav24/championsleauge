@@ -1,5 +1,5 @@
 import { Settings } from "@mui/icons-material";
-import { Autocomplete, Box, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
+import { Autocomplete, Box, FormControl, IconButton, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getListOfChampions } from "../../utils/api";
@@ -103,7 +103,10 @@ const Dashboard = () => {
   return (
     <Box>
       <Navbar />
-      <Settings className="settings_icon" onClick={(event)=>openPopover(event)}/>
+      <IconButton className="settings_icon"  onClick={(event)=>openPopover(event)}>
+      <Settings />
+      </IconButton>
+     
       <BasicPopover anchorEl={anchorEl} openPopover={openPopover} closePopover={closePopover}>
       <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap",padding:"1rem",background:"black" }}>
         <FormControl sx={{ paddingRight: "1rem" }}>
@@ -144,6 +147,21 @@ const Dashboard = () => {
         renderInput={(params) => <TextField {...params} label="Search Heros" />}
         onOpen={groupHeros}
         onInputChange = {(event,value) => filterHerosBasedOnSearch(event,value)}
+        renderOption={(props, option) => (
+          <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+            <img
+              loading="lazy"
+              width="30"
+              src={option?.image}
+              srcSet={option?.image}
+              alt="hero"
+            />
+            {option.name} {option.power}
+          </Box>
+        )}
+        isOptionEqualToValue = {(option,value) =>  {
+         return  option?.name === value?.name ? true  : false;
+        }}
       />
       </Box>
       </BasicPopover>
