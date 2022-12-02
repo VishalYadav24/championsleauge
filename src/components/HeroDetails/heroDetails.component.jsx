@@ -1,5 +1,6 @@
 import {
   BookmarkAddOutlined,
+  BookmarkRemove,
   BookmarkRemoveOutlined,
   Close,
   EmojiPeople,
@@ -145,7 +146,7 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                                   <Tooltip
                                     TransitionComponent={Zoom}
                                     title="Remove from watchlist"
-                                    placement="right-start"
+                                    placement="top"
                                   >
                                     <IconButton
                                       className="icon"
@@ -154,7 +155,7 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                                       }
                                       data-testid="remove hero"
                                     >
-                                      <BookmarkRemoveOutlined />
+                                      <BookmarkRemove  />
                                     </IconButton>
                                   </Tooltip>
                                 ) : (
@@ -181,7 +182,7 @@ const HeroDetails = ({ selectedHero, open, setOpen }) => {
                                         placement="top"
                                       >
                                         <img
-                                          style={{ width: "35px" }}
+                                          style={{ width: "35px",borderRadius:"50%"  }}
                                           alt={heroClass?.description}
                                           src={heroClass?.image}
                                         />
