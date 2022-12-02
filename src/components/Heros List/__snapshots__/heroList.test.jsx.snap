@@ -15,7 +15,7 @@ Array [
           className="MuiCardActions-root MuiCardActions-spacing card_actions css-1t6e9jv-MuiCardActions-root"
         >
           <button
-            aria-label={null}
+            aria-label="Armor undefined"
             aria-labelledby={null}
             className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
             data-mui-internal-clone-element={true}
@@ -46,7 +46,7 @@ Array [
             />
           </button>
           <button
-            aria-label={null}
+            aria-label="Damage undefined"
             aria-labelledby={null}
             className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
             data-mui-internal-clone-element={true}
@@ -94,6 +94,16 @@ Array [
           >
             Zilean
           </p>
+          <span
+            style={
+              Object {
+                "fontSize": ".8rem",
+              }
+            }
+          >
+             
+            undefined undefined
+          </span>
         </div>
         <div
           className="MuiCardActions-root MuiCardActions-spacing card_actions css-1t6e9jv-MuiCardActions-root"
@@ -138,7 +148,7 @@ Array [
             />
           </button>
           <button
-            aria-label={null}
+            aria-label="Hp undefined"
             aria-labelledby={null}
             className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
             data-mui-internal-clone-element={true}

@@ -6,14 +6,14 @@ import Layout from '../Layout/layout.component';
 import NotFound from '../404/notfound.component';
 import WatchList from '../Watchlist/watchlist.component';
 
-test('renders correctly when there are no items', () => {
-    const tree = renderer.create(
-    <MemoryRouter initialEntries={["/"]} >
-    <Dashboard />
-    </MemoryRouter>
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+// test('renders correctly when there are no items', () => {
+//     const tree = renderer.create(
+//     <MemoryRouter initialEntries={["/"]} >
+//     <Dashboard />
+//     </MemoryRouter>
+//     ).toJSON();
+//     expect(tree).toMatchSnapshot();
+//   });
 
   // test("Dashboard",()=>{
   //   const router = createBrowserRouter(
@@ -39,7 +39,19 @@ test('renders correctly when there are no items', () => {
   //   screen.debug();
   // })
 
+  // describe("Dashboard",()=>{
+  //   test("Click on settings Icon to change page settings",async()=>{
+  //     render(<BrowserRouter loader={loader}>
+  //     <Dashboard />
+  //     </BrowserRouter>)
+  //   });
+  //   screen.debug();
+  // })
 
  const getListOfChampions = ()=>{
     return null;
+  }
+
+  const loader = ()=>{
+    getListOfChampions();
   }

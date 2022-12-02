@@ -75,7 +75,7 @@ const HerosList = ({ herosList,orderBy }) => {
                   <Typography sx={{ fontSize: "1rem", fontWeight: "bold" }}>
                     {data?.name}
                   </Typography>
-                  <span style={{fontSize:".8rem"}}> {`${orderBy.toLowerCase()} ${data[orderBy]}`}</span>
+                  <span style={{fontSize:".8rem"}}> {`${orderBy?.toLowerCase()} ${data[orderBy]}`}</span>
                 </CardContent>
                 <CardActions className="card_actions">
                   <Tooltip
