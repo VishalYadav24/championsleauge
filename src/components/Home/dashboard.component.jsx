@@ -104,7 +104,7 @@ const Dashboard = () => {
     <Box>
       <Navbar />
       <IconButton className="settings_icon"  onClick={(event)=>openPopover(event)}>
-      <Settings />
+      <Settings/>
       </IconButton>
      
       <BasicPopover anchorEl={anchorEl} openPopover={openPopover} closePopover={closePopover}>

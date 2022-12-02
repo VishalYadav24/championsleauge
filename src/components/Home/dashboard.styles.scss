@@ -18,9 +18,12 @@ color: $secondary
    color: $accent
 };
 
-.MuiSvgIcon-root.settings_icon{
-    color:$neutral;
-    margin-left: 1rem;
+.MuiIconButton-root.settings_icon{
+    .MuiSvgIcon-root{
+        color:$neutral;
+        margin-left: 1rem;
+    }
+   
 }
 
 
