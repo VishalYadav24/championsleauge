@@ -22,3 +22,20 @@ color: $secondary
     color:$neutral;
     margin-left: 1rem;
 }
+
+
+.grouped_heros.MuiAutocomplete-root.MuiAutocomplete-hasPopupIcon {
+    padding:1rem;
+    width:100%;
+    color:$neutral;
+    .MuiFormLabel-root{
+        color:$neutral;
+    }
+    .MuiInputBase-input{
+        color:$accent;
+    }
+    .MuiButtonBase-root {
+        color:$accent;
+    }
+
+}

@@ -1,5 +1,5 @@
 import { Settings } from "@mui/icons-material";
-import { Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { Autocomplete, Box, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getListOfChampions } from "../../utils/api";
@@ -12,11 +12,16 @@ import "./dashboard.styles.scss";
  */
 const Dashboard = () => {
   const [anchorEl, setAnchorEl] = useState(null);
-
+ /**
+  * Opens popover at  target element
+  * @param {*} event - target element
+  */
   const openPopover = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
+ /**
+  * Close popover at target element
+  */
   const closePopover = () => {
     setAnchorEl(null);
   };
@@ -24,6 +29,8 @@ const Dashboard = () => {
   const [orderBy, setOrderBy] = useState("hp");
   const listOfChampions = useLoaderData();
   const [heroCount, setHeroCount] = useState(listOfChampions?.length);
+  const [options,setOptions] = useState([]);
+  const [filteredHeros,setFilteredHeros] = useState([]);
   const createLimitedStatsList = (herosList) => {
     return herosList?.map((data) => {
       return {
@@ -36,6 +43,31 @@ const Dashboard = () => {
       };
     });
   };
+  /**
+   * Creates a grouped list  champions based on alphabetical order
+   */
+  const groupHeros = ()=>{
+  const options =  herosList?.map((champion) => {
+    const firstLetter = champion?.name[0].toUpperCase();
+    const selectedAttribute ={
+      name: champion?.name,
+      power: champion[orderBy],
+      image:champion?.image
+    }
+    return{
+      firstLetter,...selectedAttribute
+    }
+   });
+  setOptions(options);
+  }
+  const filterHerosBasedOnSearch = (event,value) =>{
+      const filteredHeros = herosList.filter(hero => hero?.name === value );
+    setFilteredHeros(filteredHeros);
+  }
+  /**
+   * Decides how many players to show
+   * @param {*} event - number selected by user
+   */
   const handleCountChange = async (event) => {
     if (event) {
       let heroList;
@@ -48,7 +80,9 @@ const Dashboard = () => {
       setHerosList(minimalList);
     }
   };
-
+/**
+ * Sort players/ champions based on order selected by user i.e Hp,Armor,AttackDamage
+ */
   useEffect(() => {
     const temp = herosList;
     temp.sort((a, b) => {
@@ -57,10 +91,11 @@ const Dashboard = () => {
       }
       return a[orderBy] < b[orderBy] ? -1 : 1;
     });
-    console.log(temp);
     setHerosList([...temp]);
   }, [orderBy]);
-
+  /**
+   * Creates and display new list of champions based on user selected count and order
+   */
   useState(() => {
     const minimalList = createLimitedStatsList(listOfChampions);
     setHerosList(minimalList);
@@ -101,10 +136,19 @@ const Dashboard = () => {
             <MenuItem value="attackDamage">Attack damage</MenuItem>
           </Select>
         </FormControl>
+        <Autocomplete
+        className="grouped_heros"
+        options={options?.sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter))}
+        groupBy={(option) => option?.firstLetter}
+        getOptionLabel={(option) => option.name}
+        renderInput={(params) => <TextField {...params} label="Search Heros" />}
+        onOpen={groupHeros}
+        onInputChange = {(event,value) => filterHerosBasedOnSearch(event,value)}
+      />
       </Box>
       </BasicPopover>
       <HerosList
-        herosList={herosList}
+        herosList={ filteredHeros?.length > 0  ? filteredHeros : herosList}
         setHerosList={setHerosList}
         createLimitedStatsList={createLimitedStatsList}
         orderBy={orderBy}
