@@ -48,10 +48,10 @@ import WatchList from '../Watchlist/watchlist.component';
   //   screen.debug();
   // })
 
- const getListOfChampions = ()=>{
-    return null;
-  }
+//  const getListOfChampions = ()=>{
+//     return null;
+//   }
 
-  const loader = ()=>{
-    getListOfChampions();
-  }
+//   const loader = ()=>{
+//     getListOfChampions();
+//   }

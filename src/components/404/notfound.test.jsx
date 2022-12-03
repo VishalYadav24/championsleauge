@@ -5,25 +5,25 @@ import App from "../../App";
 import Layout from "../Layout/layout.component";
 import NotFound from "./notfound.component";
 
-describe("snapshot",()=>{
-    test("render App with navigation",()=>{
-        const notFound = render(
-     <Router navigator={["/badroute"]} location={["/badroute"]} >
-      <NotFound/>
-      </Router>
+// describe("snapshot",()=>{
+    // test("render App with navigation",()=>{
+    //     const notFound = render(
+    //  <Router navigator={["/badroute"]} location={["/badroute"]} >
+    //   <NotFound/>
+    //   </Router>
      
-        )
-        console.log(notFound)
-        screen.debug();
-      //  expect(notFound).toMatchSnapshot();
-    })
+    //     )
+    //     console.log(notFound)
+    //     screen.debug();
+    //   //  expect(notFound).toMatchSnapshot();
+    // })
   //   test("render App with navigation",()=>{
   //     const notFound = renderer.create(<BrowserRouter>
   //    <NotFound/>
   //     </BrowserRouter>).toJSON();
   //     expect(notFound).toMatchSnapshot();
   // })
-})
+// })
 
 // describe("Not Found", () => {
 //   test("show error on mismatched routes", async() => {
