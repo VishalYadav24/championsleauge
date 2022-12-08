@@ -357,7 +357,186 @@ exports[`Table Content snapshot 1`] = `
       <tbody
         className="MuiTableBody-root css-kyjjdq-MuiTableBody-root"
         role={null}
-      />
+      >
+        <tr
+          className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+          role={null}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            3238
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            <img
+              alt="Zilean"
+              src="https://cdn.pandascore.co/images/lol/champion/image/0449c26e-f41d-4289-a2bc-32ddb8b3b911.png"
+            />
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            Zilean
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            574
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            24
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            52
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            550
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            5.5
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            30
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium removeButton css-sghohy-MuiButtonBase-root-MuiButton-root"
+              data-testid="removeButton"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+            >
+              Remove
+            </button>
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+          role={null}
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            3239
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            <img
+              alt="Zil"
+              src="https://cdn.pandascore.co/images/lol/champion/image/0449c26e-f41d-4289-a2bc-32ddb8b3b911.png"
+            />
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            Zil
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            574
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            24
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            52
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            550
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            5.5
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            30
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium removeButton css-sghohy-MuiButtonBase-root-MuiButton-root"
+              data-testid="removeButton"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+            >
+              Remove
+            </button>
+          </td>
+        </tr>
+      </tbody>
     </table>
     <div
       className="MuiTablePagination-root css-jtlhu6-MuiTablePagination-root"
@@ -416,7 +595,7 @@ exports[`Table Content snapshot 1`] = `
         <p
           className="MuiTablePagination-displayedRows css-levciy-MuiTablePagination-displayedRows"
         >
-          0–0 of 0
+          1–2 of 2
         </p>
         <div
           className="MuiTablePagination-actions"
