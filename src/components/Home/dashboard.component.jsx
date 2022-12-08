@@ -40,18 +40,6 @@ const Dashboard = () => {
   const [heroCount, setHeroCount] = useState(listOfChampions?.length);
   const [options, setOptions] = useState([]);
   const [filteredHeros, setFilteredHeros] = useState([]);
-  const createLimitedStatsList = (herosList) => {
-    return herosList?.map((data) => {
-      return {
-        id: data?.id,
-        name: data?.name,
-        image: data?.image_url,
-        hp: data?.hp,
-        armor: data?.armor,
-        attackDamage: data?.attackdamage,
-      };
-    });
-  };
   /**
    * Creates a grouped list  champions based on alphabetical order
    */
@@ -61,7 +49,7 @@ const Dashboard = () => {
       const selectedAttribute = {
         name: champion?.name,
         power: champion[orderBy],
-        image: champion?.image,
+        image: champion?.image_url,
       };
       return {
         firstLetter,
@@ -85,9 +73,7 @@ const Dashboard = () => {
       await getListOfChampions(event?.target?.value).then(
         async (data) => await (heroList = data)
       );
-      console.log(heroList);
-      const minimalList = createLimitedStatsList(heroList);
-      setHerosList(minimalList);
+      setHerosList(heroList);
     }
   };
   /**
@@ -107,8 +93,7 @@ const Dashboard = () => {
    * Creates and display new list of champions based on user selected count and order
    */
   useState(() => {
-    const minimalList = createLimitedStatsList(listOfChampions);
-    setHerosList(minimalList);
+    setHerosList(listOfChampions);
   }, []);
   return (
     <Box>
@@ -196,7 +181,7 @@ const Dashboard = () => {
             >
               <MenuItem value="hp">HP</MenuItem>
               <MenuItem value="armor">Armor</MenuItem>
-              <MenuItem value="attackDamage">Attack damage</MenuItem>
+              <MenuItem value="attackdamage">Attack damage</MenuItem>
             </Select>
           </FormControl>
         </Box>
@@ -204,7 +189,6 @@ const Dashboard = () => {
       <HerosList
         herosList={filteredHeros?.length > 0 ? filteredHeros : herosList}
         setHerosList={setHerosList}
-        createLimitedStatsList={createLimitedStatsList}
         orderBy={orderBy}
       />
     </Box>

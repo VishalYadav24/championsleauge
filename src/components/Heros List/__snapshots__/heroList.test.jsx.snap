@@ -15,7 +15,7 @@ Array [
           className="MuiCardActions-root MuiCardActions-spacing card_actions css-1t6e9jv-MuiCardActions-root"
         >
           <button
-            aria-label="Armor undefined"
+            aria-label="Armor 24"
             aria-labelledby={null}
             className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
             data-mui-internal-clone-element={true}
@@ -46,7 +46,7 @@ Array [
             />
           </button>
           <button
-            aria-label="Damage undefined"
+            aria-label="Damage 52"
             aria-labelledby={null}
             className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
             data-mui-internal-clone-element={true}
@@ -102,7 +102,7 @@ Array [
             }
           >
              
-            undefined undefined
+            hp 574
           </span>
         </div>
         <div
@@ -147,8 +147,37 @@ Array [
               className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </button>
+          <span
+            className="MuiTypography-root MuiTypography-span css-37jdci-MuiTypography-root"
+          >
+            <button
+              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium add_to_watch css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              data-testid="add"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={0}
+              type="button"
+            >
+              watch
+              <span
+                className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </span>
           <button
-            aria-label="Hp undefined"
+            aria-label="Hp 574"
             aria-labelledby={null}
             className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
             data-mui-internal-clone-element={true}

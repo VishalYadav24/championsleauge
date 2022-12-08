@@ -17,7 +17,16 @@
   text-align: center;
   color: $neutral;
 }
-
+.add_to_watch.MuiButton-root{
+	color:$neutral;
+	border-color: $neutral;
+	font-size: 0.8rem;
+   &:hover{
+		border-color: $accent;
+		background-color: $accent;
+		color:$black;
+	}
+}
 .hero_image.MuiCardContent-root {
   padding: 8px;
 }

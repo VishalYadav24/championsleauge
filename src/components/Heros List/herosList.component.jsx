@@ -3,6 +3,7 @@ import {
 } from "@mui/icons-material";
 import {
   Badge,
+  Button,
   Card,
   CardActions,
   CardContent,
@@ -13,7 +14,8 @@ import {
   Zoom,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useContext, useState } from "react";
+import { HerosContext } from "../../context/heroscontext";
 import HeroDetails from "../HeroDetails/heroDetails.component";
 import "./herosList.styles.scss";
 /**
@@ -24,6 +26,7 @@ import "./herosList.styles.scss";
 const HerosList = ({ herosList,orderBy }) => {
   const [selectedHero, setSelectedHero] = useState("");
   const [open, setOpen] = useState(false);
+  const {addHero,checkIsHeroPresent, handleRemoveRecord,} = useContext(HerosContext);
   return (
     <Fragment>
       <Container className="herosList">
@@ -52,7 +55,7 @@ const HerosList = ({ herosList,orderBy }) => {
                   </Tooltip>
                   <Tooltip
                     TransitionComponent={Zoom}
-                    title={`Damage ${data?.attackDamage}`}
+                    title={`Damage ${data?.attackdamage}`}
                     placement="bottom"
                   >
                     <IconButton>
@@ -68,7 +71,7 @@ const HerosList = ({ herosList,orderBy }) => {
                   <img
                     className="hero_image"
                     alt={data?.name}
-                    src={data?.image}
+                    src={data?.image_url}
                   ></img>
                 </CardContent>
                 <CardContent className="hero_name">
@@ -97,6 +100,18 @@ const HerosList = ({ herosList,orderBy }) => {
                       />
                     </IconButton>
                   </Tooltip>
+                  <Typography   variant="span">
+                    {checkIsHeroPresent(data?.id) ? 
+                     <Button data-testid="remove" onClick={() => handleRemoveRecord(data?.id)} className="add_to_watch" variant="outlined">
+                     unwatch
+                   </Button>
+                    : 
+                    <Button data-testid="add" onClick={() => addHero(data)} className="add_to_watch" variant="outlined">
+                    watch
+                  </Button>
+                    }
+                   
+                  </Typography>
                   <Tooltip
                     TransitionComponent={Zoom}
                     title={`Hp ${data?.hp}`}
