@@ -12,7 +12,8 @@
 }
 
 .MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.css-1ex1afd-MuiTableCell-root {
-  padding: 0.5rem;
+  padding: .5rem;
+  padding-left: 1rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   img {
@@ -47,5 +48,5 @@ color: $neutral;
   color: #ffb100;
 }
 .MuiTableCell-root.MuiTableCell-body{
-text-align: center;
+// text-align: center;
 }
