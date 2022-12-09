@@ -21,6 +21,7 @@
 	color:$neutral;
 	border-color: $neutral;
 	font-size: 0.8rem;
+	padding:0;
    &:hover{
 		border-color: $accent;
 		background-color: $accent;
@@ -32,6 +33,7 @@
 	border-color: $accent;
 	font-size: 0.8rem;
 	background-color: $accent;
+	padding:0;
    &:hover{
 		border-color: $accent;
 		background-color: $accent;
