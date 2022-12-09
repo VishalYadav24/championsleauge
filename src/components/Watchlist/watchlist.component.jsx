@@ -10,7 +10,7 @@ const WatchList = () => {
   const {favoriteHero} = useContext(HerosContext);
   const headerConstant = [
     "id",
-    "image_url",
+    "image",
     "name",
     "hp",
     "armor",
@@ -24,7 +24,7 @@ const WatchList = () => {
     return {
       key: data,
       label: data.toUpperCase(),
-      disableSorting: data === "image_url" ? true : false,
+      disableSorting: data === "image" ? true : false,
     };
   });
   return <>

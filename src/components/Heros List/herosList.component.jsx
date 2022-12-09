@@ -102,7 +102,7 @@ const HerosList = ({ herosList,orderBy }) => {
                   </Tooltip>
                   <Typography   variant="span">
                     {checkIsHeroPresent(data?.id) ? 
-                     <Button data-testid="remove" onClick={() => handleRemoveRecord(data?.id)} className="add_to_watch" variant="outlined">
+                     <Button data-testid="remove" onClick={() => handleRemoveRecord(data?.id)} className="remove_from_watch" variant="outlined">
                      unwatch
                    </Button>
                     : 

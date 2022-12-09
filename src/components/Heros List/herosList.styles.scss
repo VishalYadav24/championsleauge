@@ -27,6 +27,18 @@
 		color:$black;
 	}
 }
+.remove_from_watch.MuiButton-root{
+	color:$black;
+	border-color: $accent;
+	font-size: 0.8rem;
+	background-color: $accent;
+   &:hover{
+		border-color: $accent;
+		background-color: $accent;
+		color:$black;
+	}
+
+}
 .hero_image.MuiCardContent-root {
   padding: 8px;
 }
