@@ -7,7 +7,7 @@ import './loader.styles.scss'
  * @param {string} value  - The value to display and to show it on scale
  * @param {string} sx - custom styles for mui  
  * @param {string} size - size of progrss bar 
- * @returns 
+ * @returns Linear Progress UI
  */
 const Loader = ({ variant, value, sx, size, thickness, color }) => {
   return (

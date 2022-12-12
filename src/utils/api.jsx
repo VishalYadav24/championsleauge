@@ -4,7 +4,6 @@ const API_KEY = "eNraJAvEMOVX0M_d7IfaecVTtJK_QiAXA-_qUL8WJckQX44PZ1U";
 const baseUrl = "https://api.pandascore.co/lol/champions";
 
 /**
- * @async function
  * @returns {Array.<Object>} list of heros
  */
 export const getListOfChampions = async (herosCount) => {
@@ -25,7 +24,6 @@ export const getListOfChampions = async (herosCount) => {
   }
 };
 /**
- * @async function
  * @param {string} heroName used to fetch hero details
  */
 export const getChampion = async (championName) => {
