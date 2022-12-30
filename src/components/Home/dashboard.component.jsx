@@ -152,6 +152,7 @@ const Dashboard = () => {
             flexWrap: "wrap",
             padding: "1rem",
             background: "black",
+            gap:"1rem"
           }}
         >
           <FormControl sx={{ paddingRight: "1rem" }}>
