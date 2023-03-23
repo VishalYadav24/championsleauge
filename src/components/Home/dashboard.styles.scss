@@ -29,7 +29,7 @@ color: $secondary
 
 .grouped_heros.MuiAutocomplete-root.MuiAutocomplete-hasPopupIcon {
     padding:1rem;
-    width:15%;
+    width:30%;
     color:$neutral;
     .MuiFormLabel-root{
         color:$neutral;
@@ -39,6 +39,15 @@ color: $secondary
     }
     .MuiButtonBase-root {
         color:$accent;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .grouped_heros.MuiAutocomplete-root.MuiAutocomplete-hasPopupIcon {
+        padding:1rem;
+    width:100%;
+    color:$neutral;
     }
 
 }
